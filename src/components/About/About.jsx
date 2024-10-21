@@ -3,7 +3,7 @@ const About = () => {
   return (
     <>
     <div className="max-w-[100%] mx-auto bg-[#08123B]">
-        <div className="w-[75%] mx-auto grid grid-cols-1 lg:grid-cols-2 pt-[100px]">
+        <div className="w-[95%] lg:w-[75%] mx-auto grid grid-cols-1 lg:grid-cols-2 pt-[100px]">
             <div className="flex flex-col gap-5 items-center">
                 <div>
                     <p className="font-[Nunito] text-[17px] text-white font-bold">About The Event</p>
