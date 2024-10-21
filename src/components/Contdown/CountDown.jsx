@@ -79,7 +79,7 @@ const CountdownTimer = () => {
         <button onClick={() => startCountdown(860000)}>Start 1 Minute Countdown</button>
       )}
 
-      {endTime && <button onClick={resetCountdown}>Reset</button>}
+      {endTime && <button className='hidden' onClick={resetCountdown}>Reset</button>}
     </div>
   );
 };
