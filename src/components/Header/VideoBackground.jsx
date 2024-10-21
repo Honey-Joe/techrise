@@ -11,6 +11,7 @@ const VideoBackground = () => {
       src="https://raw.githubusercontent.com/Honey-Joe/video/main/uploads/3129576-sd_960_540_30fps.mp4"
 
       className='absolute z-0'
+      id='vid'
     />
   );
 };

@@ -11,22 +11,24 @@ const Header = () => {
   return (
     <>
       <VideoBackground></VideoBackground>
-      <div className="max-w-[100%] relative">
-        <div className="lg:w-[90%] relative mx-auto px-5 lg:px-0 grid grid-cols-2 lg:grid-cols-2 py-5 items-center text-white">
+      <div className="max-w-[100%] relative z-10 " id="main"> 
+        <div className="w-[90%]  relative top-3 bg-white lg:text-white lg:bg-transparent  mx-auto px-5 rounded-full lg:px-5 grid grid-cols-2 lg:grid-cols-2 py-4 items-center text-black">
           <div>
-            <p className="font-[Stylish] text-[24px]">Techx 24</p>
+            <p className="font-[Stylish] text-[20px] lg:text-[24px]">Techx 24</p>
           </div>
           <div
-            className="absolute w-[100%] top-14 left-0 lg:static hidden lg:flex lg:justify-end lg:bg-transparent bg-[rgb(2,4,8)]"
+            className="absolute w-[95%] left-2 top-20 rounded-3xl py-5 lg:static hidden lg:flex lg:justify-end lg:bg-transparent bg-white"
             id="menu"
+
+            tabIndex={-1}
           >
-            <ul className=" lg:static flex  flex-col lg:flex-row  lg:flex gap-5 font-[Stylish] text-[20px] text-center">
+            <ul className=" lg:static flex   flex-col lg:flex-row  lg:flex gap-5 font-[Stylish] text-[20px] text-center">
               <li>Home</li>
               <li>About</li>
               <li>Event</li>
-              <li>Register</li>
               <li>Schedule</li>
               <li>Contact</li>
+              <li>Register</li>
             </ul>
           </div>
           <div
@@ -34,17 +36,20 @@ const Header = () => {
             onClick={() => {
               let e = document.getElementById("menu");
               e.classList.toggle("hidden");
+              let a= document.getElementById("main")
+              a.classList.toggle("backdrop-blur-3xl")
             }}
           >
             <Menu></Menu>
           </div>
+          
         </div>
-        <div className="w-[90%] lg:w-[70%] mx-auto items-center grid grid-cols-1 gap-10">
-          <div className="text-white font-bold text-center hidden lg:block">
-            <p className="font-[Stylish] text-[22px] lg:text-[52px]">
+        <div className="w-[90%] lg:w-[70%] mx-auto gap-5 lg:gap-0 items-center grid grid-cols-1 py-10">
+          <div className="text-white font-bold text-center">
+            <p className="font-[Stylish] text-[28px] lg:text-[52px]">
               Department of Computer Science
             </p>
-            <p className="font-[Stylish] text-[24px]">
+            <p className="font-[Stylish] text-[18px] lg:text-[24px]">
               St. Joseph's College (Autonomous)
             </p>
             <p className="font-[Stylish] text-[12px]">
@@ -57,7 +62,7 @@ const Header = () => {
               Tiruchirappalli - 620002
             </p>
           </div>
-          <div className="flex justify-center items-center flex-col gap-5 mt-24 lg:mt-0">
+          <div className="flex justify-center items-center flex-col gap-5  lg:mt-0">
             <div>
               <p className="text-[50px] lg:text-[100px] text-center font-[Stylish] text-white">
                 TECHX'24
@@ -65,39 +70,6 @@ const Header = () => {
             </div>
             <div>
               <span></span>
-              {/* <Countdown
-                key={0}
-                date={Date.now() + 10000}
-                intervalDelay={0}
-                precision={3}
-                autoStart={true}
-                
-                renderer={(props) => (
-                  <>
-                  {
-                    
-                  }
-                    <div className="flex gap-5 flex-wrap">
-                      <div className="flex items-center justify-center flex-col text-white border-2 rounded-lg py-2 px-3">
-                        <p>{props.days}</p>
-                        <p>Days</p>
-                      </div>
-                      <div className="flex items-center justify-center flex-col text-white border-2 rounded-lg py-2 px-3">
-                        <p>{props.hours}</p>
-                        <p>Hours</p>
-                      </div>
-                      <div className="flex items-center justify-center flex-col text-white border-2 rounded-lg py-2 px-3">
-                        <p>{props.minutes}</p>
-                        <p>Minutes</p>
-                      </div>
-                      <div className="flex items-center justify-center flex-col text-white border-2 rounded-lg py-2 px-3">
-                        <p>{props.seconds}</p>
-                        <p>Seconds</p>
-                      </div>
-                    </div>
-                  </>
-                )}
-              ></Countdown> */}
               <CountdownTimer></CountdownTimer>
             </div>
             <div className="flex justify-center">

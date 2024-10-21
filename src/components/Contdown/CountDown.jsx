@@ -43,7 +43,7 @@ const CountdownTimer = () => {
       return <span>Time's up!</span>;
     } else {
       return (
-        <div className="flex gap-5 flex-wrap">
+        <div className="grid grid-cols-4 gap-2">
         <div className="flex items-center justify-center flex-col text-white border-2 rounded-lg py-2 px-3">
           <p>{days}</p>
           <p>Days</p>

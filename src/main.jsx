@@ -3,13 +3,11 @@ import "./index.css"
 import Header from "./components/Header/Header";
 import Body from "./components/Body/Body";
 import Footer from "./components/Footer.jsx/Footer";
-import Navbar from "./components/Navbar/Navbar";
 
 
 const Applayout = ()=>{
   return(
     <>
-      <Navbar></Navbar>
       <Header></Header>
       <Body></Body>
       <Footer></Footer>
