@@ -13,7 +13,7 @@ const Header = () => {
     <div>
       <VideoBackground></VideoBackground>
       <div className="max-w-[100%] relative z-10 " id="main"> 
-        <div className="w-[90%]  relative top-3 bg-white lg:text-white lg:bg-transparent  mx-auto px-5 rounded-full lg:px-5 grid grid-cols-2 lg:grid-cols-2 py-4 items-center text-black">
+        <div className="w-[90%]  relative top-5 bg-white lg:text-white lg:bg-transparent  mx-auto px-5 rounded-full lg:px-5 grid grid-cols-2 lg:grid-cols-2 py-4 items-center text-black">
           <div>
             <p className="font-[Stylish] text-[20px] lg:text-[24px]">Techx 24</p>
           </div>
@@ -45,9 +45,9 @@ const Header = () => {
           </div>
           
         </div>
-        <div className="w-[100%] lg:w-[70%] justify-center mx-auto gap-5 lg:gap-0 items-center grid grid-cols-1 lg:py-[40px] pt-[80px]">
+        <div className="w-[95%] lg:w-[70%] justify-center mx-auto gap-5 lg:gap-0 items-center grid grid-cols-1 lg:py-[40px] pt-[80px]">
           <div className="text-white font-bold text-center">
-            <p className="font-[Stylish] text-[28px] lg:text-[52px] text-center">
+            <p className="font-[Stylish] text-[24px] lg:text-[52px] text-center text-nowrap">
               Department of Computer Science
             </p>
             <p className="font-[Stylish] text-[18px] lg:text-[24px]">
