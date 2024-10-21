@@ -10,6 +10,7 @@ const Header = () => {
   
   return (
     <>
+    <div>
       <VideoBackground></VideoBackground>
       <div className="max-w-[100%] relative z-10 " id="main"> 
         <div className="w-[90%]  relative top-3 bg-white lg:text-white lg:bg-transparent  mx-auto px-5 rounded-full lg:px-5 grid grid-cols-2 lg:grid-cols-2 py-4 items-center text-black">
@@ -44,7 +45,7 @@ const Header = () => {
           </div>
           
         </div>
-        <div className="w-[90%] lg:w-[70%] mx-auto gap-5 lg:gap-0 items-center grid grid-cols-1 py-10">
+        <div className="w-[90%] lg:w-[70%] justify-center mx-auto gap-5 lg:gap-0 items-center grid grid-cols-1 lg:py-[40px] pt-[80px]">
           <div className="text-white font-bold text-center">
             <p className="font-[Stylish] text-[28px] lg:text-[52px]">
               Department of Computer Science
@@ -92,6 +93,8 @@ const Header = () => {
           </div>
         </div>
       </div>
+
+    </div>
     </>
   );
 };
