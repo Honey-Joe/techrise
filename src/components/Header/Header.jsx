@@ -6,20 +6,7 @@ import Countdown from "react-countdown";
 const Header = () => {
 
 
-  const [countdown , Setcountdown] = useState(null)
-
-  useEffect(()=>{
-    const stored = localStorage.getItem('countdown')
-
-    if(stored){
-      Setcountdown(JSON.parse(stored))
-    }
-  },[])
-  const handlecount = ()=>{
-    const current = {...countdown};
-    localStorage.setItem('countdown',JSON.stringify(current))
-
-  }
+  
   return (
     <>
       <VideoBackground></VideoBackground>
@@ -78,12 +65,12 @@ const Header = () => {
             <div>
               <span></span>
               <Countdown
-                key={countdown}
+                key={0}
                 date={Date.now() + 10000}
                 intervalDelay={0}
                 precision={3}
                 autoStart={true}
-                onComplete={handlecount}
+                
                 renderer={(props) => (
                   <>
                   {
