@@ -26,7 +26,7 @@ const CountdownTimer = () => {
 
   // Function to start a new countdown
   const startCountdown = (durationInSeconds) => {
-    const newEndTime = Date.now() + durationInSeconds * 1000;
+    const newEndTime = 1729501610750 + durationInSeconds * 1000;
     setEndTime(newEndTime);
     localStorage.setItem('countdownEndTime', new Date(newEndTime).toISOString());
   };
