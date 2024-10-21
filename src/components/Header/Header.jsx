@@ -13,7 +13,7 @@ const Header = () => {
     <div>
       <VideoBackground></VideoBackground>
       <div className="max-w-[100%] relative z-10 " id="main"> 
-        <div className="w-[90%]  relative top-5 bg-white lg:text-white lg:bg-transparent  mx-auto px-5 rounded-full lg:px-5 grid grid-cols-2 lg:grid-cols-2 py-4 items-center text-black">
+        <div className="w-[90%]  relative lg:top-1 top-5 bg-white lg:text-white lg:bg-transparent  mx-auto px-5 rounded-full lg:px-5 grid grid-cols-2 lg:grid-cols-2 py-4 items-center text-black">
           <div>
             <p className="font-[Stylish] text-[20px] lg:text-[24px]">Techx 24</p>
           </div>
@@ -74,10 +74,10 @@ const Header = () => {
               <span></span>
               <CountdownTimer></CountdownTimer>
             </div>
-            <div className="flex justify-center">
+            <div className="flex justify-center pt-14 lg:pt-0">
               <a
                 href="#_"
-                className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-bold text-white rounded-md shadow-2xl group"
+                className="relative border inline-flex items-center justify-center px-6 py-3 overflow-hidden font-bold text-white rounded-md shadow-2xl group"
               >
                 <span className="absolute inset-0 w-full h-full transition duration-300 ease-out opacity-0 bg-gradient-to-br from-pink-600 via-purple-700 to-blue-400 group-hover:opacity-100"></span>
                 <span className="absolute top-0 left-0 w-full bg-gradient-to-b from-white to-transparent opacity-5 h-1/3"></span>
