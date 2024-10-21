@@ -13,7 +13,7 @@ const Header = () => {
     <div className="h-screen">
       <VideoBackground></VideoBackground>
       <div className="max-w-[100%] relative z-10 " id="main"> 
-        <div className="w-[90%]  relative lg:top-1 top-5 bg-white lg:text-white lg:bg-transparent  mx-auto px-5 rounded-full lg:px-5 grid grid-cols-2 lg:grid-cols-2 py-4 items-center text-black">
+        <div className="w-[90%]  relative lg:top-1 top-5 bg-white lg:text-white lg:bg-transparent  mx-auto px-5 rounded-full lg:px-5 grid grid-cols-2 lg:grid-cols-2 py-4 items-center text-black ">
           <div>
             <p className="font-[Stylish] text-[20px] lg:text-[24px]">Techx 24</p>
           </div>
@@ -50,9 +50,11 @@ const Header = () => {
             <p className="font-[Fredoka] text-[24px] lg:text-[52px] text-center  font-medium text-[#fbe072]">
               Department of Computer Science
             </p>
+
             <p className="font-[Poppins] font-medium text-[18px] lg:text-[28px]">
               St. Joseph's College (Autonomous)
             </p>
+            <div className="hidden lg:block">
             <p className="font-[Stylish] text-[12px]">
               College with Potential for Excellence by UGC
             </p>
@@ -62,6 +64,7 @@ const Header = () => {
             <p className="font-[Stylish] text-[12px]">
               Tiruchirappalli - 620002
             </p>
+            </div>
             <p className="font-[Stylish] text-[26px] mt-3 text-[#fbe072]">Cordiallly invites you</p>
           </div>
           <div className="flex justify-center items-center flex-col gap-5  lg:mt-0">
