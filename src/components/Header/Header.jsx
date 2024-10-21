@@ -45,9 +45,9 @@ const Header = () => {
           </div>
           
         </div>
-        <div className="w-[90%] lg:w-[70%] justify-center mx-auto gap-5 lg:gap-0 items-center grid grid-cols-1 lg:py-[40px] pt-[80px]">
+        <div className="w-[100%] lg:w-[70%] justify-center mx-auto gap-5 lg:gap-0 items-center grid grid-cols-1 lg:py-[40px] pt-[80px]">
           <div className="text-white font-bold text-center">
-            <p className="font-[Stylish] text-[28px] lg:text-[52px]">
+            <p className="font-[Stylish] text-[28px] lg:text-[52px] text-center">
               Department of Computer Science
             </p>
             <p className="font-[Stylish] text-[18px] lg:text-[24px]">
