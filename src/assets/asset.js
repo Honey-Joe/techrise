@@ -1,0 +1,1 @@
+export const vid = "src\assets\bg.mp4"
