@@ -45,7 +45,7 @@ const Header = () => {
           </div>
           
         </div>
-        <div className="w-[95%] lg:w-[70%] justify-center mx-auto gap-5 lg:gap-0 items-center grid grid-cols-1 lg:py-[40px] pt-[80px]">
+        <div className="w-[95%] lg:w-[70%] justify-center mx-auto gap-5 lg:gap-0 items-center grid grid-cols-1 lg:py-[20px] pt-[80px]">
           <div className="text-white font-bold text-center">
             <p className="font-[Stylish] text-[24px] lg:text-[52px] text-center text-nowrap">
               Department of Computer Science
@@ -62,6 +62,7 @@ const Header = () => {
             <p className="font-[Stylish] text-[12px]">
               Tiruchirappalli - 620002
             </p>
+            <p className="font-[Stylish] text-[26px] mt-3">Cordiallly invites you</p>
           </div>
           <div className="flex justify-center items-center flex-col gap-5  lg:mt-0">
             <div>
