@@ -3,7 +3,8 @@ import Countdown from 'react-countdown';
 
 // Helper function to get remaining time
 const getRemainingTime = (endTime) => {
-  const currentTime = Date.now();
+  const currentTime = 1729501610750;
+  console.log(currentTime);
   return endTime - currentTime;
 };
 
