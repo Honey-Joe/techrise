@@ -78,7 +78,7 @@ const Header = () => {
               <span></span>
               <CountdownTimer></CountdownTimer>
             </div>
-            <div className="flex justify-center pt-14 lg:pt-0">
+            <div className="flex justify-center  lg:pt-0">
               <a
                 href="#_"
                 className="relative border inline-flex items-center justify-center px-6 py-3 overflow-hidden font-bold text-white rounded-md shadow-2xl group"
