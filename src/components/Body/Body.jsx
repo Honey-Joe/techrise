@@ -1,10 +1,12 @@
 import React from 'react'
+import About from '../About/About'
 
 const Body = () => {
   return (
-    <div>
+    <>
+    <About></About>
       
-    </div>
+    </>
   )
 }
 
