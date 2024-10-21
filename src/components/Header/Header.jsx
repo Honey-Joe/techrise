@@ -45,9 +45,9 @@ const Header = () => {
           </div>
           
         </div>
-        <div className="w-[95%] lg:w-[70%] justify-center mx-auto gap-5 lg:gap-0 items-center grid grid-cols-1 lg:py-[20px] pt-[80px]">
+        <div className="w-[95%] lg:w-[70%] justify-center mx-auto gap-5 lg:gap-0 items-center grid grid-cols-1 lg:py-[0px] pt-[60px]">
           <div className="text-white font-bold text-center">
-            <p className="font-[Fredoka] text-[24px] lg:text-[52px] text-center  font-bold text-[#fbe072]">
+            <p className="font-[Fredoka] text-[24px] lg:text-[52px] text-center  font-medium text-[#fbe072]">
               Department of Computer Science
             </p>
             <p className="font-[Poppins] font-medium text-[18px] lg:text-[28px]">
@@ -69,7 +69,7 @@ const Header = () => {
               <p className="text-[50px] lg:text-[100px] text-center font-[Stylish] text-white">
                 TECHX'24
               </p>
-              <p className="text-white font-[Poppins]">A State Level Intercollegiate Technical Symposium</p>
+              <p className="text-white font-[Poppins] text-center">A State Level Intercollegiate Technical Symposium</p>
             </div>
             <div>
               <span></span>
