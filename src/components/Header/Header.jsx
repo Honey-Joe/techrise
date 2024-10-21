@@ -47,7 +47,7 @@ const Header = () => {
         </div>
         <div className="w-[95%] lg:w-[70%] justify-center mx-auto gap-5 lg:gap-0 items-center grid grid-cols-1 lg:py-[20px] pt-[80px]">
           <div className="text-white font-bold text-center">
-            <p className="font-[Poppins] text-[24px] lg:text-[52px] text-center  font-bold text-[#fbe072]">
+            <p className="font-[Fredoka] text-[24px] lg:text-[52px] text-center  font-bold text-[#fbe072]">
               Department of Computer Science
             </p>
             <p className="font-[Poppins] font-medium text-[18px] lg:text-[28px]">
@@ -62,13 +62,14 @@ const Header = () => {
             <p className="font-[Stylish] text-[12px]">
               Tiruchirappalli - 620002
             </p>
-            <p className="font-[Stylish] text-[26px] mt-3">Cordiallly invites you</p>
+            <p className="font-[Stylish] text-[26px] mt-3 text-[#fbe072]">Cordiallly invites you</p>
           </div>
           <div className="flex justify-center items-center flex-col gap-5  lg:mt-0">
             <div>
               <p className="text-[50px] lg:text-[100px] text-center font-[Stylish] text-white">
                 TECHX'24
               </p>
+              <p className="text-white font-[Poppins]">A State Level Intercollegiate Technical Symposium</p>
             </div>
             <div>
               <span></span>
