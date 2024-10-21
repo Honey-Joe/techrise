@@ -8,7 +8,7 @@ const VideoBackground = () => {
       loop
       autoPlay
       style={{ width: '100%', height: '100vh', objectFit: 'cover' }}
-      src="src\assets\bg.mp4"
+      src="https://www.pexels.com/video/plexus-of-abstract-geometrical-lines-and-figures-3129576/"
 
       className='absolute z-0'
     />
