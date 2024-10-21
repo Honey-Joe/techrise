@@ -66,7 +66,7 @@ const CountdownTimer = () => {
 
   return (
     <div className='text-white'>
-      <h1>Countdown Timer</h1>
+      {/* <h1>Countdown Timer</h1> */}
 
       {/* If endTime is set, start countdown */}
       {endTime ? (
