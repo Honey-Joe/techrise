@@ -76,7 +76,7 @@ const CountdownTimer = () => {
           onComplete={resetCountdown} // Reset when countdown finishes
         />
       ) : (
-        <button onClick={() => startCountdown(860000)}>Start 1 Minute Countdown</button>
+        startCountdown(8600000)
       )}
 
       {endTime && <button className='hidden' onClick={resetCountdown}>Reset</button>}
