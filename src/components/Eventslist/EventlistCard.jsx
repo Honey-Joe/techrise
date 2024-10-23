@@ -3,8 +3,8 @@ import { ArrowRight, ChevronRight, Plus } from "lucide-react";
 const Eventlistcard = (props) => {
   return (
     <>
-      <div className="">
-        <div className="overflow-hidden group relative  ">
+      <div className="hover:-translate-y-3 transition">
+        <div className="overflow-hidden group relative ">
           <img
             src={props.imgurl}
             alt="blog image"
@@ -34,9 +34,9 @@ const Eventlistcard = (props) => {
               <div>
                 <a
                   href="#_"
-                  class="relative inline-flex items-center justify-center px-5 py-5 overflow-hidden font-medium transition duration-300 ease-out border-2 border-[#F57104] rounded-full shadow-md group"
+                  class="relative inline-flex items-center justify-center px-5 py-5 overflow-hidden font-medium transition duration-300 ease-out border-2 border-[#081E4C] rounded-full shadow-md group"
                 >
-                  <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-[#F57104] group-hover:translate-x-0 ease">
+                  <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-[#081E4C] group-hover:translate-x-0 ease">
                     <ArrowRight></ArrowRight>
                   </span>
                   <span class="absolute flex items-center justify-center w-full h-full transition-all duration-300 transform group-hover:translate-x-full ease">
