@@ -8,7 +8,7 @@ const Eventlistcard = (props) => {
           <img
             src={props.imgurl}
             alt="blog image"
-            className="w-[100%] h-[500px]  object-cover z-20 rounded-t-xl"
+            className="w-[100%] h-[400px]  object-cover z-20 rounded-xl"
           />
         </div>
         <div className="rounded-xl flex flex-col shadow-lg  transition w-[90%] mx-auto -translate-y-[120px] bg-white">

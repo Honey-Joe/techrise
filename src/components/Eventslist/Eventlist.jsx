@@ -5,7 +5,7 @@ import Eventlistcard from "./EventlistCard";
 const Eventlist = () => {
   return (
     <>
-      <div className="max-w-[100%] bg-[url(https://ik.imagekit.io/HoneyJoe/techx/26291.jpg?updatedAt=1729666922292)] before:absolute before:top-0 before:bg-green-300">
+      <div className="max-w-[100%] bg-[#08123B]">
         <div className="w-[90%] mx-auto grid grid-cols-1 py-10 gap-3">
           <div className="flex justify-center">
             <div className="">
