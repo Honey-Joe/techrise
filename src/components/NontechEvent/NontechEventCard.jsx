@@ -1,6 +1,6 @@
 import { ArrowRight, ChevronRight, Plus } from "lucide-react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import "react-lazy-load-image-component/src/effects/opacity.css";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const NontechEventCard = (props) => {
   return (
@@ -9,7 +9,7 @@ const NontechEventCard = (props) => {
         <div className="overflow-hidden group">
           <LazyLoadImage
             alt={"image non tech event"}
-            effect="opacity"
+            effect="blur"
             wrapperProps={{
               style: { transitionDelay: "1s" },
             }}
