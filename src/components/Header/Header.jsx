@@ -45,7 +45,7 @@ const Header = () => {
           </div>
           
         </div>
-        <div className="w-[95%] lg:w-[70%] justify-center mx-auto gap-10 lg:gap-0 items-center grid grid-cols-1 lg:py-[0px] pt-[100px]">
+        <div className="w-[95%] lg:w-[70%] justify-center mx-auto gap-10 lg:gap-0 items-center grid grid-cols-1 lg:py-[0px] pt-[80px]">
           <div className="text-white font-bold text-center">
             <p className="font-[Fredoka] text-[26px] lg:text-[52px] text-center font-bold text-[#fbe072]">
               DEPARTMENT OF COMPUTER SCIENCE
