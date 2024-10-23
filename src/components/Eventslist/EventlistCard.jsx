@@ -3,15 +3,15 @@ import { ArrowRight, ChevronRight, Plus } from "lucide-react";
 const Eventlistcard = (props) => {
   return (
     <>
-      <div className="hover:-translate-y-3 transition">
-        <div className="overflow-hidden group relative ">
+      <div className="hover:-translate-y-3 transition h-fit shadow-lg relative">
+        <div className="overflow-hidden group">
           <img
             src={props.imgurl}
             alt="blog image"
             className="w-[100%] h-[400px]  object-cover z-20 rounded-xl"
           />
         </div>
-        <div className="rounded-xl flex flex-col shadow-lg  transition w-[90%] mx-auto -translate-y-[120px] bg-white">
+        <div className="rounded-xl flex flex-col shadow-lg  transition w-[90%] mx-auto absolute -bottom-4 left-5  bg-white">
           <div className="flex flex-col p-5 gap-5">
             
             <div>
