@@ -1,13 +1,19 @@
 import { ArrowRight, ChevronRight, Plus } from "lucide-react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/opacity.css";
 
 const Eventlistcard = (props) => {
   return (
     <>
       <div className="hover:-translate-y-3 transition h-fit shadow-lg relative">
         <div className="overflow-hidden group">
-          <img
+        <LazyLoadImage
+            alt={"image non tech event"}
+            effect="opacity"
+            wrapperProps={{
+              style: { transitionDelay: "1s" },
+            }}
             src={props.imgurl}
-            alt="blog image"
             className="w-[100%] h-[400px]  object-cover z-20 rounded-xl"
           />
         </div>

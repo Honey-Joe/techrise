@@ -1,19 +1,24 @@
 import { ArrowRight, ChevronRight, Plus } from "lucide-react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/opacity.css";
 
-const NontechEventCard= (props) => {
+const NontechEventCard = (props) => {
   return (
     <>
       <div className="hover:-translate-y-3 transition h-fit shadow-lg relative">
         <div className="overflow-hidden group">
-          <img
+          <LazyLoadImage
+            alt={"image non tech event"}
+            effect="opacity"
+            wrapperProps={{
+              style: { transitionDelay: "1s" },
+            }}
             src={props.imgurl}
-            alt="blog image"
             className="w-[100%] h-[400px]  object-cover z-20 rounded-xl"
           />
         </div>
         <div className="rounded-xl flex flex-col shadow-lg  transition w-[90%] mx-auto absolute -bottom-4 left-[5%]  bg-white">
           <div className="flex flex-col p-5 gap-5">
-            
             <div>
               <p className="font-[Poppins] text-[20px] md:text-[22px] lg:text-[24px] text-[#2a254d] hover:text-[#4f5de4] font-medium">
                 {props.blogtitle}
@@ -21,13 +26,11 @@ const NontechEventCard= (props) => {
             </div>
             <div className="flex justify-between">
               <div className="flex gap-2 items-center">
-                
                 <div>
                   <div>
                     <p className="font-[Poppins] line-clamp-2 text-[14px] font-medium text-[#2a254d] hover:text-[#4f5de4]">
                       {props.authorname}
                     </p>
-                    
                   </div>
                 </div>
               </div>
