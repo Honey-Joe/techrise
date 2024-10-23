@@ -40,7 +40,7 @@ const CountdownTimer = () => {
   // Renderer for the Countdown component
   const countdownRenderer = ({days, hours, minutes, seconds, completed }) => {
     if (completed) {
-      return <span>Time's up!</span>;
+      return <span>Event Started</span>;
     } else {
       return (
         <div className="grid grid-cols-4 gap-2">
@@ -77,7 +77,7 @@ const CountdownTimer = () => {
           onComplete={resetCountdown} // Reset when countdown finishes
         />
       ) : (
-        startCountdown(86000)
+        startCountdown(1600000)
       )}
 
       {endTime && <button className='hidden' onClick={resetCountdown}>Reset</button>}
