@@ -24,7 +24,7 @@ const Eventlistcard = (props) => {
                 
                 <div>
                   <div>
-                    <p className="font-[Poppins] line-clamp-2 text-[16px] font-medium text-[#2a254d] hover:text-[#4f5de4]">
+                    <p className="font-[Poppins] line-clamp-2 text-[14px] font-medium text-[#2a254d] hover:text-[#4f5de4]">
                       {props.authorname}
                     </p>
                     
