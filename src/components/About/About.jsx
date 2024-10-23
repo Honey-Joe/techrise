@@ -6,7 +6,7 @@ const About = () => {
         <div className="w-[95%] lg:w-[75%] mx-auto grid grid-cols-1 lg:grid-cols-2 py-[80px] gap-7">
             <div className="flex flex-col gap-5 items-center lg:items-start">
                 <div>
-                    <p className="font-[Nunito] text-[17px] text-white font-bold">About The Event</p>
+                    <p className="font-[Nunito] text-[17px] text-white font-bold text-nowrap">About The Event</p>
                 </div>
                 <div className="font-[Nunito] text-white text-[30px] lg:text-[32px] text-center lg:text-left font-bold">
                     <p>TECHX '24 <br />A State Level Intercollegiate Technical Symposium</p>

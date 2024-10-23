@@ -45,9 +45,9 @@ const Header = () => {
           </div>
           
         </div>
-        <div className="w-[95%] lg:w-[70%] justify-center mx-auto gap-5 lg:gap-0 items-center grid grid-cols-1 lg:py-[0px] py-[40px]">
+        <div className="w-[95%] lg:w-[70%] justify-center mx-auto gap-10 lg:gap-0 items-center grid grid-cols-1 lg:py-[0px] pt-[100px]">
           <div className="text-white font-bold text-center">
-            <p className="font-[Fredoka] text-[24px] lg:text-[52px] text-center  font-medium text-[#fbe072]">
+            <p className="font-[Fredoka] text-[26px] lg:text-[52px] text-center  font-medium text-[#fbe072]">
               Department of Computer Science
             </p>
 
@@ -78,7 +78,7 @@ const Header = () => {
               <span></span>
               <CountdownTimer></CountdownTimer>
             </div>
-            <div className="flex justify-center  lg:pt-0">
+            <div className="flex justify-center mt-10  lg:pt-0">
               <a
                 href="#_"
                 className="relative border inline-flex items-center justify-center px-6 py-3 overflow-hidden font-bold text-white rounded-md shadow-2xl group"
