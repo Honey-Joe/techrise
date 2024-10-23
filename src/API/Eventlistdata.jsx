@@ -33,6 +33,6 @@ export const Eventlistdata = [
         blogtitle: "Quiz Quest",
         authorimg: "https://ik.imagekit.io/HoneyJoe/inspiration/author-1.png?updatedAt=1728320706956",
         designation : "Front End Developer",
-        authorname : "Bring your groundbreaking ideas to life at Innovation Showcase, where creativity meets practical innovation! In this idea presentation event, participants will pitch their visionary concepts and solutions for real-world problems to a panel of experts."
+        authorname : "Test your knowledge across a range of topics in Quiz Quest, the ultimate trivia showdown! This fast-paced quiz competition challenges participants with questions on technology, science, current affairs, and general knowledge.."
     },
 ]
