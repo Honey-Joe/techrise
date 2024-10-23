@@ -21,7 +21,7 @@ const Eventlistcard = (props) => {
           <div className="flex flex-col p-5 gap-5">
             
             <div>
-              <p className="font-[Poppins] text-[20px] md:text-[22px] lg:text-[24px] text-[#2a254d] hover:text-[#4f5de4] font-medium">
+              <p className="font-[Fredoka] text-[20px] md:text-[22px] lg:text-[24px] text-[#2a254d] hover:text-[#4f5de4] font-medium">
                 {props.blogtitle}
               </p>
             </div>
@@ -30,7 +30,7 @@ const Eventlistcard = (props) => {
                 
                 <div>
                   <div>
-                    <p className="font-[Poppins] line-clamp-2 text-[14px] font-medium text-[#2a254d] hover:text-[#4f5de4]">
+                    <p className="font-[Fredoka] line-clamp-2 text-[14px] font-medium text-[#2a254d] hover:text-[#4f5de4]">
                       {props.authorname}
                     </p>
                     

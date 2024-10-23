@@ -28,7 +28,7 @@ const Header = () => {
               <li>About</li>
               <li>Event</li>
               <li>Schedule</li>
-              <li>Contact</li>
+              <li>Venue</li>
               <li>Register</li>
             </ul>
           </div>
