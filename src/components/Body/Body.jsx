@@ -9,7 +9,7 @@ const Body = () => {
   return (
     <>
     <About></About>
-    <Eventlist></Eventlist>
+    <Eventlist ></Eventlist>
     <NontechEvent></NontechEvent>
     <Schedule></Schedule>
     <Map></Map>

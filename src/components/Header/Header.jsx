@@ -24,11 +24,11 @@ const Header = () => {
             tabIndex={-1}
           >
             <ul className=" lg:static flex   flex-col lg:flex-row  lg:flex gap-5 font-[Stylish] text-[20px] text-center">
-              <li>Home</li>
-              <li>About</li>
-              <li>Event</li>
-              <li>Schedule</li>
-              <li>Venue</li>
+              <li><a href="">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#event">Event</a></li>
+              <li><a href="#schedule">Schedule</a></li>
+              <li><a href="#venue">Venue</a></li>
               <li>Register</li>
             </ul>
           </div>

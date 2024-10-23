@@ -5,7 +5,7 @@ import Eventlistcard from "./EventlistCard";
 const Eventlist = () => {
   return (
     <>
-      <div className="max-w-[100%] bg-[#081F4D]">
+      <div className="max-w-[100%] bg-[#081F4D]" id="event">
         <div className="w-[80%] mx-auto grid grid-cols-1 py-10 gap-5">
           <div className="flex justify-center">
             <div className="">

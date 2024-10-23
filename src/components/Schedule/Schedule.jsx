@@ -3,8 +3,8 @@ import Schedulesection from "./Schedulesection"
 
 const Schedule = () => {
   return (
-    <>
-    <div className="max-w-[100%] bg-[#08123B] py-[40px]">
+    <> 
+    <div className="max-w-[100%] bg-[#08123B] py-[40px]" id="schedule">
       <div className="w-[75%] grid grid-cols-1 mx-auto">
         <div className="flex justify-center  flex-col items-center gap-4">
           <div>
