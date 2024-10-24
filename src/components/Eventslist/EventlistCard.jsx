@@ -21,7 +21,7 @@ const Eventlistcard = (props) => {
           <div className="flex flex-col p-5 gap-5 items-center">
             
             <div>
-              <p className="font-[Fredoka] text-[20px] md:text-[22px] lg:text-[24px] text-[#2a254d] hover:text-[#4f5de4] font-medium">
+              <p className="font-[Fredoka] text-[18px] md:text-[22px] lg:text-[24px] text-[#2a254d] hover:text-[#4f5de4] font-medium">
                 {props.blogtitle}
               </p>
             </div>
