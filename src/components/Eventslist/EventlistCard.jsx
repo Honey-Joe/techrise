@@ -14,7 +14,7 @@ const Eventlistcard = (props) => {
               style: { transitionDelay: "1s" },
             }}
             src={props.imgurl}
-            className="w-[100%] h-[400px]  object-cover z-20 rounded-xl"
+            className="w-[100%] h-[300px]  object-cover z-20 rounded-xl"
           />
         </div>
         <div className="rounded-xl flex flex-col shadow-lg  transition w-[90%] mx-auto absolute -bottom-4 left-[5%]  bg-white">
