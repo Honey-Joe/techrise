@@ -14,7 +14,7 @@ const Eventlistcard = (props) => {
               style: { transitionDelay: "1s" },
             }}
             src={props.imgurl}
-            className="w-[100%] h-[300px]  object-cover z-20 rounded-xl"
+            className="w-[100%] h-[250px]  object-cover z-20 rounded-xl"
           />
         </div>
         <div className="rounded-xl flex flex-col shadow-lg  transition w-[90%] mx-auto absolute -bottom-4 left-[5%]  bg-white">
@@ -30,12 +30,12 @@ const Eventlistcard = (props) => {
               <div>
                 <a
                   href="#_"
-                  class="relative inline-flex items-center justify-center px-20 py-5 overflow-hidden font-medium transition duration-300 ease-out border-2 border-[#081E4C] rounded-full shadow-md group"
+                  class="relative inline-flex items-center justify-center px-16 py-5 overflow-hidden font-medium transition duration-300 ease-out border-2 border-[#081E4C] rounded-full shadow-md group"
                 >
                   <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-[#081E4C] group-hover:translate-x-0 ease">
                     <ArrowRight></ArrowRight>
                   </span>
-                  <span class="absolute flex items-center justify-center w-full h-full transition-all duration-300 transform group-hover:translate-x-full ease">
+                  <span class="absolute flex items-center justify-center w-full h-full transition-all duration-300 transform group-hover:translate-x-full ease text-[12px]">
                     Rules And Regulation
                   </span>
                 </a>

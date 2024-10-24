@@ -26,9 +26,9 @@ const Eventlist = () => {
               effect={"coverflow"}
               grabCursor={true}
               centeredSlides={true}
-              slidesPerView={"1"}
+              slidesPerView={"2"}
               coverflowEffect={{
-                rotate: 0,
+                rotate: 10,
                 stretch: 0,
                 depth: 100,
                 modifier: 2,

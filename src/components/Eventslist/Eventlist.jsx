@@ -36,8 +36,8 @@ const Eventlist = () => {
               centeredSlides={true}
               slidesPerView={"2"}
               coverflowEffect={{
-                rotate: 0,
-                stretch: 0,
+                rotate: 10,
+                stretch: 10,
                 depth: 100,
                 modifier: 2,
                 slideShadows: false,
