@@ -12,9 +12,7 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-    scroll-behavior: smooth;
-}
+
 
 .swiper {
     width: 100%;

@@ -7,14 +7,20 @@ import { EffectCoverflow, Pagination } from "swiper/modules";
 import './styles.css';
 import NontechEventCard from "./NontechEventCard";
 import { NonTechEventlistdata } from "../../API/NonTechEventlistdata";
+import "aos/dist/aos.css"
+import { useEffect } from "react";
+import Aos from "aos";
 
 
 
 const Eventlist = () => {
+  useEffect(()=>{
+    Aos.init();
+  },[])
   return (
     <>
       <div className="max-w-[100%] bg-[#081F4D]" id="event">
-        <div className="w-[95%] mx-auto grid grid-cols-1 py-10 gap-5">
+        <div className="w-[95%] mx-auto grid grid-cols-1 py-10 gap-5" data-aos="fade-up-left">
           
           <div className="flex justify-center">
             <p className="font-[Fredoka] text-[24px]  md:text-[32px] lg:text-[40px] text-white font-semibold">

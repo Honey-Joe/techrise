@@ -1,9 +1,15 @@
-
+import Aos from "aos";
+import "aos/dist/aos.css"
+import { useEffect } from "react";
 const About = () => {
+    useEffect(()=>{
+        Aos.init();
+      },[])
   return (
+    
     <>
-    <div className="max-w-[100%] mx-auto bg-[#08123B]" id="about">
-        <div className="w-[95%] lg:w-[75%] mx-auto grid grid-cols-1 lg:grid-cols-2 py-[80px] gap-7">
+    <div className="max-w-[100%] mx-auto bg-[#08123B] border-t border-white" id="about"  >
+        <div className="w-[95%] lg:w-[75%] mx-auto grid grid-cols-1 lg:grid-cols-2 py-[80px] gap-7" data-aos="fade-up">
             <div className="flex flex-col gap-5 items-center lg:items-start">
                 <div>
                     <p className="font-[Fredoka] text-[17px] text-white font-bold text-nowrap">About The Event</p>

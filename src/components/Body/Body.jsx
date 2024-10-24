@@ -1,22 +1,35 @@
-import React from 'react'
-import About from '../About/About'
-import Eventlist from '../Eventslist/Eventlist'
-import NontechEvent from '../NontechEvent/NontechEvent'
-import Schedule from '../Schedule/Schedule'
-import Map from '../Map/Map'
+import React, { useEffect } from "react";
+import About from "../About/About";
+import Eventlist from "../Eventslist/Eventlist";
+import NontechEvent from "../NontechEvent/NontechEvent";
+import Schedule from "../Schedule/Schedule";
+import Map from "../Map/Map";
+import Aos from "aos";
+import "aos/dist/aos.css"
 
 const Body = () => {
+  useEffect(()=>{
+    Aos.init();
+  },[])
   return (
     <>
-    <About></About>
-    <Eventlist ></Eventlist>
-    <NontechEvent></NontechEvent>
-    <Schedule></Schedule>
-    <Map></Map>
-    
-      
+      <div>
+        <About></About>
+      </div>
+      <div>
+        <Eventlist></Eventlist>
+      </div>
+      <div>
+        <NontechEvent></NontechEvent>
+      </div>
+      <div>
+        <Schedule></Schedule>
+      </div>
+      <div>
+        <Map></Map>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default Body
+export default Body;
