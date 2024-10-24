@@ -30,7 +30,7 @@ export const NonTechEventlistdata = [
         imgurl: "https://ik.imagekit.io/HoneyJoe/techx/7536671.jpg?updatedAt=1729676430118",
         tag: "Development",
         date: "26 Mar, 2023",
-        blogtitle: "DAZZLE",
+        blogtitle: "DESIGN DAZZLE",
         authorimg: "https://ik.imagekit.io/HoneyJoe/inspiration/author-1.png?updatedAt=1728320706956",
         designation : "Front End Developer",
         authorname : "Unleash your artistic flair in Dazzle, the creative poster-making competition! Participants will design visually striking posters based on a given theme, blending creativity, design skills, and messaging to captivate audiences. "
