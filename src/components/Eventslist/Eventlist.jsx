@@ -14,7 +14,7 @@ const Eventlist = () => {
   return (
     <>
       <div className="max-w-[100%] bg-[#081F4D]" id="event">
-        <div className="w-[100%] mx-auto grid grid-cols-1 py-10 gap-5">
+        <div className="w-[95%] mx-auto grid grid-cols-1 py-10 gap-5">
           <div className="flex justify-center">
             <div className="">
               <h5 class="flex  items-center justify-center gap-3">
