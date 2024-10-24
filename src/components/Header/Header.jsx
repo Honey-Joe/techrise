@@ -9,8 +9,8 @@ const Header = () => {
   return (
     <>
       <div className="">
-        <div className="max-w-[100%] relative z-10 bg-[#081F4D]" id="main">
-          <div className="w-[85%] left-7 lg:left-28 lg:top-1 top-10 bg-white lg:rounded-md  mx-auto px-5 rounded-full lg:px-5 grid grid-cols-2 lg:grid-cols-2 py-4 lg:py-2 shadow-lg items-center lg:bg-[#08123B] border-white border text-black lg:text-[#6f83df] fixed">
+        <div className="max-w-[100%] relative z-10 bg-[url(https://ik.imagekit.io/HoneyJoe/techx/104962.jpg?updatedAt=1729784638022)] bg-cover bg-no-repeat h-screen" id="main">
+          <div className="w-[85%] lg:w-[100%] left-7 lg:left-0 lg:top-0 top-10 bg-white lg:rounded-md  mx-auto px-5 rounded-full lg:px-5 grid grid-cols-2 lg:grid-cols-2 py-4 lg:py-2 shadow-lg items-center lg:bg-[#08123B]  text-black lg:text-[#6f83df] fixed">
             <div>
               <p className="font-[Stylish] text-[20px] lg:text-[24px]">
                 Techx 24
