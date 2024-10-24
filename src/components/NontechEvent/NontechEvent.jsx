@@ -19,7 +19,7 @@ const Eventlist = () => {
   },[])
   return (
     <>
-      <div className="max-w-[100%] bg-[#081F4D]" id="event">
+      <div className="max-w-[100%] bg-[#081F4D] overflow-hidden" id="event">
         <div className="w-[95%] mx-auto grid grid-cols-1 py-10 gap-5" data-aos="fade-up-left">
           
           <div className="flex justify-center">
