@@ -14,7 +14,7 @@ const Eventlist = () => {
   return (
     <>
       <div className="max-w-[100%] bg-[#081F4D]" id="event">
-        <div className="w-[90%] mx-auto grid grid-cols-1 py-10 gap-5">
+        <div className="w-[100%] mx-auto grid grid-cols-1 py-10 gap-5">
           
           <div className="flex justify-center">
             <p className="font-[Fredoka] text-[24px]  md:text-[32px] lg:text-[40px] text-white font-semibold">
