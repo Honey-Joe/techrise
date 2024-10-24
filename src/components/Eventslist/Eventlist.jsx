@@ -39,7 +39,7 @@ const Eventlist = () => {
                 rotate: 10,
                 stretch: 10,
                 depth: 100,
-                modifier: 2,
+                modifier: 3,
                 slideShadows: false,
               }}
               pagination={true}
