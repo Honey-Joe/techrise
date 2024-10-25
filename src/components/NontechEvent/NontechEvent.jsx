@@ -20,7 +20,7 @@ const Eventlist = () => {
   return (
     <>
       <div className="max-w-[100%] bg-[#081F4D] overflow-hidden" id="event">
-        <div className="w-[95%] mx-auto grid grid-cols-1 py-10 gap-5" data-aos="fade-up-left">
+        <div className="w-[95%] mx-auto grid grid-cols-1 py-10 gap-5" data-aos="fade-up-left" data-aos-delay="300">
           
           <div className="flex justify-center">
             <p className="font-[Fredoka] text-[24px]  md:text-[32px] lg:text-[40px] text-white font-semibold">
