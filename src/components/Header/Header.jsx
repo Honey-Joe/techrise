@@ -10,8 +10,8 @@ const Header = () => {
   return (
     <>
       <div className="">
-        <div className="h-screen" id="main">
-          <div class="area">
+        <div className="h-screen overflow-hidden" id="main">
+          <div class="area overflow-hidden">
             <ul class="circles">
               <li></li>
               <li></li>
@@ -25,7 +25,7 @@ const Header = () => {
               <li></li>
             </ul>
           </div>
-          <div className="w-[85%] z-10 lg:w-[100%] left-7 lg:left-0 lg:top-0 top-10  lg:rounded-md  mx-auto px-5 rounded-full lg:px-10 grid grid-cols-2 lg:grid-cols-2 py-4 lg:py-2 shadow-lg items-center bg-[#08123B] text-white  fixed" data-aos="fade-up">
+          <div className="w-[85%] z-10 lg:w-[100%] left-7 lg:left-0 lg:top-0 top-10  lg:rounded-md  mx-auto px-5 rounded-full lg:px-10 grid grid-cols-2 lg:grid-cols-2 py-4 lg:py-2 shadow-lg items-center bg-[#08123B] text-white  fixed" >
             <div>
               <p className="font-[Stylish] text-[20px] lg:text-[24px]">
                 Techx 24

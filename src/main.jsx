@@ -9,7 +9,7 @@ const Applayout = ()=>{
     <>
       <Header></Header>
       <Body></Body>
-      <Footer></Footer>
+      {/* <Footer></Footer> */}
     </>
   )
 }

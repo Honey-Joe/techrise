@@ -4,7 +4,7 @@ import Schedulesection from "./Schedulesection"
 const Schedule = () => {
   return (
     <> 
-    <div className="max-w-[100%] bg-[#08123B] py-[40px]" id="schedule" >
+    <div className="max-w-[100%] bg-[#08123B] overflow-hidden py-[40px]" id="schedule" >
       <div className="w-[75%] grid grid-cols-1 mx-auto" data-aos="fade-up-left" data-aos-delay="300">
         <div className="flex justify-center  flex-col items-center gap-4">
           <div>
