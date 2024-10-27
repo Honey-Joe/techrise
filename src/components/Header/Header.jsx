@@ -25,7 +25,7 @@ const Header = () => {
               <li></li>
             </ul>
           </div>
-          <div className="w-[85%] z-10 lg:w-[100%] left-7 lg:left-0 lg:top-0 top-10  lg:rounded-md  mx-auto px-5 rounded-full lg:px-10 grid grid-cols-2 lg:grid-cols-2 py-4 lg:py-2 shadow-lg items-center bg-[#08123B] text-white  fixed" >
+          <div className="w-[95%] z-10 lg:w-[100%] left-2 lg:left-0 lg:top-0 top-5  lg:rounded-md  mx-auto px-5 rounded-full lg:px-10 grid grid-cols-2 lg:grid-cols-2 py-4 lg:py-0 shadow-lg items-center bg-[#08123B] text-white  fixed" >
             <div>
               <p className="font-[Stylish] text-[20px] lg:text-[24px]">
                 Techx 24
@@ -93,7 +93,7 @@ const Header = () => {
               </Button>
             </div>
           </div>
-          <div className="w-[95%] lg:w-[70%] justify-center  mx-auto gap-10 lg:gap-0 items-center grid grid-cols-1 lg:py-[100px] py-[150px]">
+          <div className="w-[95%] lg:w-[70%] justify-center  mx-auto gap-10 lg:gap-0 items-center grid grid-cols-1 lg:py-[70px] py-[90px]">
             <div className="text-white font-bold text-center">
               <p className="font-[Fredoka] text-[26px] lg:text-[52px] text-center font-bold text-[#fbe072]">
                 DEPARTMENT OF COMPUTER SCIENCE
@@ -117,7 +117,7 @@ const Header = () => {
                 Cordiallly invites you
               </p>
             </div>
-            <div className="flex justify-center items-center flex-col gap-5  lg:mt-0">
+            <div className="flex justify-center items-center flex-col gap-5">
               <div>
                 <p className="text-[50px] lg:text-[100px] text-center font-[Stylish] text-white">
                   TECHX'24
