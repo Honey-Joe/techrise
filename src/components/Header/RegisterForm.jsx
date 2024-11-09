@@ -145,7 +145,7 @@ const RegisterForm = () => {
             </div>
             <div className="flex flex-col gap-2 w-full">
               <label className="font-[Fredoka] font-medium text-[20px]">Technical Event</label>
-              <select value={selectedOption1} onChange={handleSelect1Change} className="shadow-md border pr-28 pl-3 py-3 rounded-lg" {...register("Event1")}>
+              <select {...register("ev1")} value={selectedOption1} onChange={handleSelect1Change} className="shadow-md border pr-28 pl-3 py-3 rounded-lg">
                 <option value="">Select an option</option>
                 {options1.map((option) => (
                   <option key={option} value={option}>
@@ -157,7 +157,7 @@ const RegisterForm = () => {
 
             <div className="flex flex-col gap-2 w-full">
               <label className="font-[Fredoka] font-medium text-[20px]">Non Technical Event</label>
-              <select value={selectedOption2} onChange={handleSelect2Change} className="shadow-md border pr-28 pl-3 py-3 rounded-lg" {...register("Event 2")}>
+              <select {...register("ev2")} value={selectedOption2} onChange={handleSelect2Change} className="shadow-md border pr-28 pl-3 py-3 rounded-lg">
                 <option value="">Select an option</option>
                 {options2.map((option) => (
                   <option
