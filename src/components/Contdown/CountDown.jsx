@@ -26,7 +26,7 @@ const CountdownTimer = () => {
 
   // Function to start a new countdown
   const startCountdown = (durationInSeconds) => {
-    const newEndTime = 1729501610750 + durationInSeconds * 1000;
+    const newEndTime = 1731167962127 + durationInSeconds * 1000;
     setEndTime(newEndTime);
     localStorage.setItem('countdownEndTime', new Date(newEndTime).toISOString());
   };
@@ -77,7 +77,7 @@ const CountdownTimer = () => {
           onComplete={resetCountdown} // Reset when countdown finishes
         />
       ) : (
-        startCountdown(1600000)
+        startCountdown(1641600)
       )}
 
       {endTime && <button className='hidden' onClick={resetCountdown}>Reset</button>}

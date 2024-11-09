@@ -2,11 +2,15 @@ import { useEffect, useState } from "react";
 import VideoBackground from "./VideoBackground";
 import { Menu } from "lucide-react";
 import CountdownTimer from "../Contdown/CountDown";
-import { Button, Paragraph, SideSheet } from "evergreen-ui";
+import axios from "axios"
+import { useForm } from 'react-hook-form';
+import { Button, Dialog, Pane, Paragraph, SideSheet } from "evergreen-ui";
 import "./baackground.css";
+import RegisterForm from "./RegisterForm";
 const Header = () => {
   const [isShown, setIsShown] = useState(false);
-
+  const [isDialog, setIsDialog] = useState(false);
+  
   return (
     <>
       <div className="">
@@ -25,7 +29,7 @@ const Header = () => {
               <li></li>
             </ul>
           </div>
-          <div className="w-[95%] z-10 lg:w-[100%] left-2 lg:left-0 lg:top-0 top-5  lg:rounded-md  mx-auto px-5 rounded-full lg:px-10 grid grid-cols-2 lg:grid-cols-2 py-4 lg:py-0 shadow-lg items-center bg-[#08123B] text-white  fixed" >
+          <div className="w-[95%] z-10 lg:w-[100%] left-2 lg:left-0 lg:top-0 top-5  lg:rounded-md  mx-auto px-5 rounded-full lg:px-10 grid grid-cols-2 lg:grid-cols-2 py-4 lg:py-0 shadow-lg items-center bg-[#08123B] text-white  fixed">
             <div>
               <p className="font-[Stylish] text-[20px] lg:text-[24px]">
                 Techx 24
@@ -130,22 +134,40 @@ const Header = () => {
                 <span></span>
                 <CountdownTimer></CountdownTimer>
               </div>
-              <div className="flex justify-center mt-10  lg:mt-0 lg:pt-0">
-                <a
-                  href="#_"
-                  className="relative border inline-flex items-center justify-center px-6 py-3 overflow-hidden font-bold text-white rounded-md shadow-2xl group"
-                >
-                  <span className="absolute inset-0 w-full h-full transition duration-300 ease-out opacity-0 bg-gradient-to-br from-pink-600 via-purple-700 to-blue-400 group-hover:opacity-100"></span>
-                  <span className="absolute top-0 left-0 w-full bg-gradient-to-b from-white to-transparent opacity-5 h-1/3"></span>
-                  <span className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-white to-transparent opacity-5"></span>
-                  <span className="absolute bottom-0 left-0 w-4 h-full bg-gradient-to-r from-white to-transparent opacity-5"></span>
-                  <span className="absolute bottom-0 right-0 w-4 h-full bg-gradient-to-l from-white to-transparent opacity-5"></span>
-                  <span className="absolute inset-0 w-full h-full border border-white rounded-md opacity-10"></span>
-                  <span className="absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-56 opacity-5"></span>
-                  <span className="relative font-[Stylish] text-[22px]">
-                    Register Now
-                  </span>
-                </a>
+              <div className="flex justify-center mt-10  lg:mt-0 lg:pt-0 ">
+                
+                <Pane >
+                  
+                  <Dialog
+                    isShown={isDialog}
+                    title="Registration Form"
+                    hasFooter={false}
+                    onCloseComplete={() => setIsDialog(false)}
+                    className="bg-[#08123B]"
+                    background="#000"
+                    width={400}
+                  >
+                    <RegisterForm></RegisterForm>
+                  </Dialog>
+                  `
+                  <a
+                    href="#_"
+                    onClick={() => setIsDialog(true)}
+                    className="relative border inline-flex items-center justify-center px-6 py-3 overflow-hidden font-bold text-white rounded-md shadow-2xl group"
+                  >
+                    <span className="absolute inset-0 w-full h-full transition duration-300 ease-out opacity-0 bg-gradient-to-br from-pink-600 via-purple-700 to-blue-400 group-hover:opacity-100"></span>
+                    <span className="absolute top-0 left-0 w-full bg-gradient-to-b from-white to-transparent opacity-5 h-1/3"></span>
+                    <span className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-white to-transparent opacity-5"></span>
+                    <span className="absolute bottom-0 left-0 w-4 h-full bg-gradient-to-r from-white to-transparent opacity-5"></span>
+                    <span className="absolute bottom-0 right-0 w-4 h-full bg-gradient-to-l from-white to-transparent opacity-5"></span>
+                    <span className="absolute inset-0 w-full h-full border border-white rounded-md opacity-10"></span>
+                    <span className="absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-56 opacity-5"></span>
+                    <span className="relative font-[Stylish] text-[22px]">
+                      Register Now
+                    </span>
+                  </a>
+                </Pane>
+                `
               </div>
             </div>
           </div>
