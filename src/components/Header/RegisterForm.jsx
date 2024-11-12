@@ -3,6 +3,8 @@ import axios from "axios";
 import { useForm } from "react-hook-form";
 import { useEffect, useState } from "react";
 import { z } from "zod";
+import { zodResolver } from '@hookform/resolvers/zod';
+
 
 const RegisterForm = () => {
   const [selectedOption1, setSelectedOption1] = useState("");
@@ -33,8 +35,9 @@ const RegisterForm = () => {
   };
 
   const [data, setData] = useState([]);
-  const { reset, register, control, handleSubmit } = useForm({
+  const { reset, register, control, handleSubmit, formState:{errors} } = useForm({
     mode: "onChange",
+    resolver: zodResolver(schema)
   });
 
   const fetchdta = async (data) => {
