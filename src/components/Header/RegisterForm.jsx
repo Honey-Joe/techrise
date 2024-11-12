@@ -68,10 +68,8 @@ const RegisterForm = () => {
     try {
       const response = await axios.post('https://backendtest-nu.vercel.app/?vercelToolbarCode=l6xoaVPekClcrjz/email',  email );
       return response.data.message === "Email available";
-      console.log("Email")
     } catch (error) {
-      return false; // Email exists if error occurs
-      console.log("Email")
+      return true; // Email exists if error occurs
     }
   };
 
