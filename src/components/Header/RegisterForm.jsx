@@ -71,9 +71,7 @@ const RegisterForm = () => {
     }
     reset();
   };
-  useEffect(() => {
-    fetchdta();
-  }, []);
+ 
   return (
     <div>
       <form
