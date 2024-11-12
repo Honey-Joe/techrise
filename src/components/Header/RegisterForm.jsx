@@ -9,7 +9,13 @@ import { zodResolver } from '@hookform/resolvers/zod';
 const RegisterForm = () => {
 
   const schema = z.object({
-    
+    email: z
+    .string()
+    .email("Invalid email address")
+    .refine(async (email) => {
+      const isAvailable = await checkEmailExists(email);
+      return isAvailable;
+    }, { message: "Email already exists" }),
     name: z.string().min(1, {message:"Enter Your Name"}),
     college: z.string().min(1, {message:"Enter Your College Name"}),
     dept: z.string().min(1,{message:"Enter Your Department"})
@@ -129,19 +135,7 @@ const RegisterForm = () => {
                 name=""
                 id=""
                 placeholder="email"
-                {...register("email", {
-                  required: "Email is required",
-                  validate: async (value) => {
-                    const isAvailable = await checkEmailExists(value);
-                    if (!isAvailable) {
-                      setError("email", {
-                        type: "manual",
-                        message: "Email already exists",
-                      });
-                    }
-                    return isAvailable || "Email already exists";
-                  },
-                })}
+                {...register("email")}
                 className="shadow-md border pr-28 pl-3 py-3 rounded-lg"
               />
               {errors.email && <p style={{ color: 'red' }}>{errors.email.message}</p>}
