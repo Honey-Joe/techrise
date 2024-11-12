@@ -9,13 +9,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 const RegisterForm = () => {
 
   const schema = z.object({
-    email: z
-    .string()
-    .email("Invalid email address")
-    .refine(async (email) => {
-      const isAvailable = await checkEmailExists(email);
-      return isAvailable;
-    }, { message: "Email already exists" }),
+    
     name: z.string().min(1, {message:"Enter Your Name"}),
     college: z.string().min(1, {message:"Enter Your College Name"}),
     dept: z.string().min(1,{message:"Enter Your Department"})
@@ -39,19 +33,7 @@ const RegisterForm = () => {
   const handleSelect1Change = (event) => {
     setSelectedOption1(event.target.value);
   };
-  const checkEmailExists = async (email) => {
-    try {
-      const response = await axios.post(
-        'https://backendtest-nu.vercel.app/email',
-         email 
-      );
-      return response.data.message === 'Email available';
-      console.log("Email")
-    } catch (error) {
-      return false; // Email exists if error occurs
-    }
-  };
-  checkEmailExists();
+ 
   // State for the second select
   const [selectedOption2, setSelectedOption2] = useState("");
 
@@ -65,13 +47,7 @@ const RegisterForm = () => {
     resolver: zodResolver(schema)
   });
 
-  const fetchdta = async (data) => {
-    const data1 = await axios.get(
-      "https://backendtest-nu.vercel.app/"
-    );
-    setData(data1.data);
-      checkEmailExists(data1.data.email);
-  };
+  
 
   
 
@@ -137,7 +113,19 @@ const RegisterForm = () => {
                 name=""
                 id=""
                 placeholder="email"
-                {...register("email")}
+                {...register("email", {
+                  required: "Email is required",
+                  validate: async (value) => {
+                    const isAvailable = await checkEmailExists(value);
+                    if (!isAvailable) {
+                      setError("email", {
+                        type: "manual",
+                        message: "Email already exists",
+                      });
+                    }
+                    return isAvailable || "Email already exists";
+                  },
+                })}
                 className="shadow-md border pr-28 pl-3 py-3 rounded-lg"
               />
               {errors.email && <p style={{ color: 'red' }}>{errors.email.message}</p>}
