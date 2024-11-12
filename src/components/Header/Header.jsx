@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import VideoBackground from "./VideoBackground";
 import { Menu } from "lucide-react";
 import CountdownTimer from "../Contdown/CountDown";
 import axios from "axios"
