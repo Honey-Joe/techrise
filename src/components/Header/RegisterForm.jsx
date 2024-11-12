@@ -83,7 +83,6 @@ const RegisterForm = () => {
           <div></div>
         </>
       );
-      setIsDialog(false);
     } catch (error) {
       alert("Form submission failed.");
     }
@@ -197,7 +196,7 @@ const RegisterForm = () => {
               </select>
             </div>
 
-            <button type="submit" className="border rounded-lg px-5 py-2" >
+            <button type="submit" className="border rounded-lg px-5 py-2" onCloseComplete={() => setIsDialog(false)} >
               Submit
             </button>
           </div>
