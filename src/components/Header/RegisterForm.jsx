@@ -2,9 +2,22 @@ import React from "react";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import { useEffect, useState } from "react";
+import { z } from 'zod';
+import { zodResolver } from '@hookform/resolvers/zod';
 
 
 const RegisterForm = () => {
+
+  const schema = z.object({
+    email: z
+      .string()
+      .email("Invalid email address")
+      .refine(async (email) => {
+        const isAvailable = await checkEmailExists(email);
+        return isAvailable;
+      }, { message: "Email already exists" }),
+    // Other fields like password can be added here
+  });
   const checkEmailExists = async (email) => {
     try {
       const response = await axios.post(
@@ -112,22 +125,10 @@ const RegisterForm = () => {
                 name=""
                 id=""
                 placeholder="email"
-                {...register("email", {
-                  required: "Email is required",
-                  validate: async (value) => {
-                    const isAvailable = await checkEmailExists(value);
-                    if (!isAvailable) {
-                      setError("email", {
-                        type: "manual",
-                        message: "Email already exists",
-                      });
-                    }
-                    return isAvailable || "Email already exists";
-                  },
-                })}
+                {...register("email")}
                 className="shadow-md border pr-28 pl-3 py-3 rounded-lg"
               />
-              {errors.email && <p style={{ color: 'red' }}>{errors.email.message}</p>}
+        {errors.email && <p style={{ color: 'red' }}>{errors.email.message}</p>}
             </div>
             <div className="flex flex-col gap-2 justify-center items-start">
               <label
