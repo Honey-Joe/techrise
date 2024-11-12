@@ -12,11 +12,7 @@ const RegisterForm = () => {
     email: z
     .string()
     .email("Invalid email address")
-    .nonempty("Email is required")
-    .refine(async (email) => {
-      const isAvailable = await checkEmailExists(email);
-      return isAvailable;
-    }, { message: "Email already exists" }),
+    .nonempty("Email is required"),
     name: z.string().min(1, {message:"Enter Your Name"}),
     college: z.string().min(1, {message:"Enter Your College Name"}),
     dept: z.string().min(1,{message:"Enter Your Department"})
