@@ -71,6 +71,7 @@ const RegisterForm = () => {
       console.log("Email")
     } catch (error) {
       return false; // Email exists if error occurs
+      console.log("Email")
     }
   };
 
