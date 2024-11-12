@@ -34,8 +34,8 @@ const Eventlist = () => {
               centeredSlides={true}
               slidesPerView={"2"}
               coverflowEffect={{
-                rotate: 15,
-                stretch: 0,
+                rotate: 10,
+                stretch: 10,
                 depth: 100,
                 modifier: 3,
                 slideShadows: false,
@@ -49,11 +49,11 @@ const Eventlist = () => {
                   spaceBetween: 20,
                 },
                 768: {
-                  slidesPerView: 4,
+                  slidesPerView: 3,
                   spaceBetween: 40,
                 },
                 1024: {
-                  slidesPerView: 4,
+                  slidesPerView: 3,
                   spaceBetween: 50,
                 },
               }}

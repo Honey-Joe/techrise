@@ -56,7 +56,7 @@ const Eventlist = () => {
                   spaceBetween: 20,
                 },
                 768: {
-                  slidesPerView: 4,
+                  slidesPerView: 3,
                   spaceBetween: 40,
                 },
                 1024: {
@@ -83,10 +83,6 @@ const Eventlist = () => {
                 })}
             
             </Swiper>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            
-          </div>
         </div>
       </div>
     </>

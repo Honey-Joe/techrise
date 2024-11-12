@@ -29,7 +29,7 @@ const Header = () => {
               <li></li>
             </ul>
           </div>
-          <div className="w-[95%] z-10 lg:w-[100%] left-2 lg:left-0 lg:top-0 top-5  lg:rounded-md  mx-auto px-5 rounded-full lg:px-10 grid grid-cols-2 lg:grid-cols-2 py-4 lg:py-0 shadow-lg items-center bg-[#08123B] text-white  fixed">
+          <div className=" z-10 w-[100%]  lg:left-0 lg:top-0  lg:rounded-md  mx-auto px-5 lg:px-10 grid grid-cols-2 lg:grid-cols-2 py-7 lg:py-3 shadow-lg items-center bg-[#08123B] text-white  fixed">
             <div>
               <p className="font-[Stylish] text-[20px] lg:text-[24px]">
                 Techx 24
@@ -52,7 +52,7 @@ const Header = () => {
                 <li>
                   <a href="#venue">Venue</a>
                 </li>
-                <li>Register</li>
+                <li onClick={() => setIsDialog(true)} className="cursor-pointer">Register</li>
               </ul>
             </div>
             <div className="flex justify-end lg:hidden ">
@@ -82,7 +82,7 @@ const Header = () => {
                     <li>
                       <a href="#venue">Venue</a>
                     </li>
-                    <li>Register</li>
+                    <li onClick={() => setIsDialog(true)}>Register</li>
                   </ul>
                 </Paragraph>
               </SideSheet>
@@ -97,7 +97,7 @@ const Header = () => {
               </Button>
             </div>
           </div>
-          <div className="w-[95%] lg:w-[70%] justify-center  mx-auto gap-10 lg:gap-0 items-center grid grid-cols-1 lg:py-[70px] py-[110px]">
+          <div className="w-[90%] lg:w-[70%] justify-center  mx-auto  items-center grid grid-cols-1 h-screen pt-10">
             <div className="text-white font-bold text-center">
               <p className="font-[Fredoka] text-[26px] lg:text-[52px] text-center font-bold text-[#fbe072]">
                 DEPARTMENT OF COMPUTER SCIENCE
@@ -120,7 +120,6 @@ const Header = () => {
               <p className="font-[Stylish] text-[26px] mt-3 text-[#fbe072]">
                 Cordiallly invites you
               </p>
-            </div>
             <div className="flex justify-center items-center flex-col gap-5">
               <div>
                 <p className="text-[50px] lg:text-[100px] text-center font-[Stylish] text-white">
@@ -136,7 +135,7 @@ const Header = () => {
               </div>
               <div className="flex justify-center mt-10  lg:mt-0 lg:pt-0 ">
                 
-                <Pane >
+                <Pane>
                   
                   <Dialog
                     isShown={isDialog}
@@ -153,7 +152,7 @@ const Header = () => {
                   <a
                     href="#_"
                     onClick={() => setIsDialog(true)}
-                    className="relative border inline-flex items-center justify-center px-6 py-3 overflow-hidden font-bold text-white rounded-md shadow-2xl group"
+                    className="relative border inline-flex items-center justify-center px-6 py-3 overflow-hidden font-bold text-white rounded-md shadow-[0px_0px_20px_8px_#fff] group"
                   >
                     <span className="absolute inset-0 w-full h-full transition duration-300 ease-out opacity-0 bg-gradient-to-br from-pink-600 via-purple-700 to-blue-400 group-hover:opacity-100"></span>
                     <span className="absolute top-0 left-0 w-full bg-gradient-to-b from-white to-transparent opacity-5 h-1/3"></span>
@@ -169,6 +168,7 @@ const Header = () => {
                 </Pane>
                 `
               </div>
+            </div>
             </div>
           </div>
         </div>

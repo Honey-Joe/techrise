@@ -4,7 +4,6 @@ import Header from "./components/Header/Header";
 import Body from "./components/Body/Body";
 import Footer from "./components/Footer.jsx/Footer";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import App from "./components/Test1/Test1";
 
 const Applayout = ()=>{
   return(
@@ -20,10 +19,7 @@ const  appRouter = createBrowserRouter([
     path:"/",
     element:<Applayout></Applayout>
   },
-  {
-    path:"/test",
-    element:<App></App>
-  }
+ 
 ])
 const root= ReactDOM.createRoot(document.getElementById("root"));
 

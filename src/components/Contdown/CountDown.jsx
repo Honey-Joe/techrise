@@ -44,19 +44,19 @@ const CountdownTimer = () => {
     } else {
       return (
         <div className="grid grid-cols-4 gap-2">
-        <div className="flex items-center justify-center flex-col text-white border-2 rounded-lg py-2 px-3">
+        <div className="flex items-center justify-center flex-col text-white border-2 rounded-lg py-2 px-3 shadow-[0px_0px_10px_3px_#fff]">
           <p>{days}</p>
           <p>Days</p>
         </div>
-        <div className="flex items-center justify-center flex-col text-white border-2 rounded-lg py-2 px-3">
+        <div className="flex items-center justify-center flex-col text-white border-2 rounded-lg py-2 px-3 shadow-[0px_0px_10px_3px_#fff]">
           <p>{hours}</p>
           <p>Hours</p>
         </div>
-        <div className="flex items-center justify-center flex-col text-white border-2 rounded-lg py-2 px-3">
+        <div className="flex items-center justify-center flex-col text-white border-2 rounded-lg py-2 px-3 shadow-[0px_0px_10px_3px_#fff]">
           <p>{minutes}</p>
           <p>Minutes</p>
         </div>
-        <div className="flex items-center justify-center flex-col text-white border-2 rounded-lg py-2 px-3">
+        <div className="flex items-center justify-center flex-col text-white border-2 rounded-lg py-2 px-3 shadow-[0px_0px_10px_3px_#fff]">
           <p>{seconds}</p>
           <p>Seconds</p>
         </div>

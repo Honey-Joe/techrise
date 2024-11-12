@@ -1,32 +1,68 @@
 export const ScheduleSectionData = [
     {
-        time: "7.30 - 9.45",
+        time: "9.30 - 10.30",
         venue: "Barberier Hall",
         eventimg: "https://ik.imagekit.io/HoneyJoe/techx/148837-OUBFCD-179.jpg?updatedAt=1729703883354",
         eventname: "Inauguration"
     },
     {
-        time: "7.30 - 9.45",
-        venue: "location of code crack",
+        time: "10.30 - 12.00",
+        venue: "SCC Lab",
         eventimg: "https://ik.imagekit.io/HoneyJoe/techx/20945203.jpg?updatedAt=1729668200134",
         eventname: "Code Crack"
     },
     {
-        time: "7.30 - 9.45",
-        venue: "location of Web Maestro ",
+        time:"10.30 - 12.00",
+        venue:"Jubliee Hall",
+        eventimg: "https://ik.imagekit.io/HoneyJoe/techx/chess-pieces-colors.jpg?updatedAt=1729676437006",
+        eventname: "Tech Link"
+    },
+    {
+        time: "11.30 - 1.00",
+        venue: "ECC Lab ",
         eventimg: "https://ik.imagekit.io/HoneyJoe/techx/web-design-concept-with-drawings.jpg?updatedAt=1729668256582",
         eventname: "Web Maestro"
     },
     {
-        time: "7.30 - 9.45",
-        venue: "location of innovation sshowcase",
+        time: "11.30 - 1.00",
+        venue: "Jubliee Hall",
+        eventimg: "https://ik.imagekit.io/HoneyJoe/techx/expressive-young-lady-posing-studio.jpg?updatedAt=1729676442972",
+        eventname: "Quiet Quest"
+    },
+    {
+        time: "11.00 - 1.00",
+        venue: "MCA Seminar Hall",
         eventimg: "https://ik.imagekit.io/HoneyJoe/techx/5537.jpg?updatedAt=1729668457303",
         eventname: "Innovation Showcase"
     },
     {
-        time: "7.30 - 9.45",
-        venue: "location of quiz quest",
+        time:"1.00 - 2.00",
+        eventimg:"https://ik.imagekit.io/HoneyJoe/techx/chicken-stir-fried-chili-along-with-bell-pepper-tomatoes-carrots.jpg?updatedAt=1731425939561",
+        eventname:"Lunch"
+    },
+    {
+        time: "2.00 - 3.30",
+        venue: "Jubliee Hall",
         eventimg: "https://ik.imagekit.io/HoneyJoe/techx/84c5e52c-e940-44b8-b89e-8e5c77011dce.jpg?updatedAt=1729668532102",
         eventname: "Quiz Quest"
     },
+    {
+        time: "2.00 - 3.30",
+        venue: "SCC Lab",
+        eventimg: "https://ik.imagekit.io/HoneyJoe/techx/7536671.jpg?updatedAt=1729676430118",
+        eventname: "Design Dazzle"
+    },
+    {
+        time: "2.30 - 3.45",
+        venue: "Jubliee Hall",
+        eventimg: "https://ik.imagekit.io/HoneyJoe/techx/20845.jpg?updatedAt=1729676435658",
+        eventname: "Brand Blast"
+    },
+    {
+        time: "4.00 - 4.30",
+        venue: "Jubliee Hall",
+        eventimg: "https://ik.imagekit.io/HoneyJoe/techx/7053543.jpg?updatedAt=1731426283236",
+        eventname: "Valediction"
+    },
+
 ]

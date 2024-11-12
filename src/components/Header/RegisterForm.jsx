@@ -7,6 +7,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 
 
 const RegisterForm = () => {
+  const [isDialog, setIsDialog] = useState(false);
 
   const schema = z.object({
     email: z
@@ -82,6 +83,7 @@ const RegisterForm = () => {
           <div></div>
         </>
       );
+      setIsDialog(false);
     } catch (error) {
       alert("Form submission failed.");
     }
@@ -195,7 +197,7 @@ const RegisterForm = () => {
               </select>
             </div>
 
-            <button type="submit" className="border rounded-lg px-5 py-2">
+            <button type="submit" className="border rounded-lg px-5 py-2" >
               Submit
             </button>
           </div>
