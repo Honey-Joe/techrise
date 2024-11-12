@@ -60,6 +60,7 @@ const RegisterForm = () => {
   const [data, setData] = useState([]);
   const { reset, register, control, handleSubmit, formState:{errors} } = useForm({
     mode: "onChange",
+    resolver: zodResolver(schema)
   });
 
   
