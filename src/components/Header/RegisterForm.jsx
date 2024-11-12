@@ -46,10 +46,12 @@ const RegisterForm = () => {
          email 
       );
       return response.data.message === 'Email available';
+      console.log("Email")
     } catch (error) {
       return false; // Email exists if error occurs
     }
   };
+  checkEmailExists();
   // State for the second select
   const [selectedOption2, setSelectedOption2] = useState("");
 
@@ -68,7 +70,7 @@ const RegisterForm = () => {
       "https://backendtest-nu.vercel.app/"
     );
     setData(data1.data);
-    // console.log(data.data);
+      checkEmailExists(data1.data.email);
   };
 
   
