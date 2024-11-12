@@ -12,7 +12,11 @@ const RegisterForm = () => {
     email: z
     .string()
     .email("Invalid email address")
-    .nonempty("Email is required"),
+    .nonempty("Email is required")
+    .refine(async (email) => {
+      const isAvailable = await checkEmailExists(email);
+      return isAvailable;
+    }, { message: "Email already exists" }),
     name: z.string().min(1, {message:"Enter Your Name"}),
     college: z.string().min(1, {message:"Enter Your College Name"}),
     dept: z.string().min(1,{message:"Enter Your Department"})
@@ -65,7 +69,7 @@ const RegisterForm = () => {
       const response = await axios.post('https://backendtest-nu.vercel.app/?vercelToolbarCode=l6xoaVPekClcrjz/email',  email );
       return response.data.message === "Email available";
     } catch (error) {
-      return true; // Email exists if error occurs
+      return false; // Email exists if error occurs
     }
   };
 
