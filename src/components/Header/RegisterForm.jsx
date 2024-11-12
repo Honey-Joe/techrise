@@ -7,6 +7,20 @@ import { zodResolver } from '@hookform/resolvers/zod';
 
 
 const RegisterForm = () => {
+
+  const schema = z.object({
+    email: z
+    .string()
+    .email("Invalid email address")
+    .nonempty("Email is required")
+    .refine(async (email) => {
+      const isAvailable = await checkEmailExists(email);
+      return isAvailable;
+    }, { message: "Email already exists" }),
+    name: z.string().min(1, {message:"Enter Your Name"}),
+    college: z.string().min(1, {message:"Enter Your College Name"}),
+    dept: z.string().min(1,{message:"Enter Your Department"})
+  })
   const [selectedOption1, setSelectedOption1] = useState("");
 
   // List of options for each select
@@ -48,19 +62,7 @@ const RegisterForm = () => {
     // console.log(data.data);
   };
 
-  const schema = z.object({
-    email: z
-    .string()
-    .email("Invalid email address")
-    .nonempty("Email is required")
-    .refine(async (email) => {
-      const isAvailable = await checkEmailExists(email);
-      return isAvailable;
-    }, { message: "Email already exists" }),
-    name: z.string().min(1, {message:"Enter Your Name"}),
-    college: z.string().min(1, {message:"Enter Your College Name"}),
-    dept: z.string().min(1,{message:"Enter Your Department"})
-  })
+  
 
   const checkEmailExists = async (email) => {
     try {
@@ -116,7 +118,6 @@ const RegisterForm = () => {
                 placeholder="Enter Your Name"
                 {...register("name")}
                 className="shadow-md border p-3 rounded-md w-full"
-                required
               />
               <p className='text-red-500'>{errors?.name?.message}</p>
             </div>
@@ -134,7 +135,6 @@ const RegisterForm = () => {
                 placeholder="email"
                 {...register("email")}
                 className="shadow-md border pr-28 pl-3 py-3 rounded-lg"
-                required
               />
               {errors.email && <p style={{ color: 'red' }}>{errors.email.message}</p>}
             </div>
@@ -152,8 +152,8 @@ const RegisterForm = () => {
                 placeholder="college"
                 {...register("college")}
                 className="shadow-md border pr-28 pl-3 py-3 rounded-lg"
-                required
               />
+              <p className='text-red-500'>{errors?.college?.message}</p>
             </div>
             <div className="flex flex-col gap-2 justify-center items-start">
               <label
@@ -169,8 +169,9 @@ const RegisterForm = () => {
                 placeholder="dept"
                 {...register("dept")}
                 className="shadow-md border pr-28 pl-3 py-3 rounded-lg"
-                required
               />
+                <p className='text-red-500'>{errors?.dept?.message}</p>
+
             </div>
             <div className="flex flex-col gap-2 w-full">
               <label className="font-[Fredoka] font-medium text-[20px]">Technical Event</label>
