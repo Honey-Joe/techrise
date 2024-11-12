@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import { useEffect, useState } from "react";
+import { z } from "zod";
 
 const RegisterForm = () => {
   const [selectedOption1, setSelectedOption1] = useState("");
@@ -42,6 +43,29 @@ const RegisterForm = () => {
     );
     setData(data1.data);
     // console.log(data.data);
+  };
+
+  const schema = z.object({
+    email: z
+    .string()
+    .email("Invalid email address")
+    .nonempty("Email is required")
+    .refine(async (email) => {
+      const isAvailable = await checkEmailExists(email);
+      return isAvailable;
+    }, { message: "Email already exists" }),
+    name: z.string().min(1, {message:"Enter Your Name"}),
+    college: z.string().min(1, {message:"Enter Your College Name"}),
+    dept: z.string().min(1,{message:"Enter Your Department"})
+  })
+
+  const checkEmailExists = async (email) => {
+    try {
+      const response = await axios.post('https://backendtest-nu.vercel.app/?vercelToolbarCode=l6xoaVPekClcrjz/email', { email });
+      return response.data.message === "Email available";
+    } catch (error) {
+      return false; // Email exists if error occurs
+    }
   };
 
   const onsubmit = async (data) => {
@@ -91,6 +115,7 @@ const RegisterForm = () => {
                 className="shadow-md border p-3 rounded-md w-full"
                 required
               />
+              <p className='text-red-500'>{errors?.name?.message}</p>
             </div>
             <div className="flex flex-col gap-2 justify-center items-start">
               <label
@@ -108,6 +133,7 @@ const RegisterForm = () => {
                 className="shadow-md border pr-28 pl-3 py-3 rounded-lg"
                 required
               />
+              {errors.email && <p style={{ color: 'red' }}>{errors.email.message}</p>}
             </div>
             <div className="flex flex-col gap-2 justify-center items-start">
               <label
