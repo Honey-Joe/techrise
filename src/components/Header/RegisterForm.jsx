@@ -2,18 +2,11 @@ import React from "react";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import { useEffect, useState } from "react";
-import { z } from "zod";
-import { zodResolver } from '@hookform/resolvers/zod';
 
 
 const RegisterForm = () => {
 
-  const schema = z.object({
-    
-    name: z.string().min(1, {message:"Enter Your Name"}),
-    college: z.string().min(1, {message:"Enter Your College Name"}),
-    dept: z.string().min(1,{message:"Enter Your Department"})
-  })
+  
   const [selectedOption1, setSelectedOption1] = useState("");
 
   // List of options for each select
@@ -44,7 +37,6 @@ const RegisterForm = () => {
   const [data, setData] = useState([]);
   const { reset, register, control, handleSubmit, formState:{errors} } = useForm({
     mode: "onChange",
-    resolver: zodResolver(schema)
   });
 
   
@@ -97,7 +89,6 @@ const RegisterForm = () => {
                 {...register("name")}
                 className="shadow-md border p-3 rounded-md w-full"
               />
-              <p className='text-red-500'>{errors?.name?.message}</p>
             </div>
             <div className="flex flex-col gap-2 justify-center items-start">
               <label
@@ -143,7 +134,6 @@ const RegisterForm = () => {
                 {...register("college")}
                 className="shadow-md border pr-28 pl-3 py-3 rounded-lg"
               />
-              <p className='text-red-500'>{errors?.college?.message}</p>
             </div>
             <div className="flex flex-col gap-2 justify-center items-start">
               <label
@@ -160,7 +150,6 @@ const RegisterForm = () => {
                 {...register("dept")}
                 className="shadow-md border pr-28 pl-3 py-3 rounded-lg"
               />
-                <p className='text-red-500'>{errors?.dept?.message}</p>
 
             </div>
             <div className="flex flex-col gap-2 w-full">
