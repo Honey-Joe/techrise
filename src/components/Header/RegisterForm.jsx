@@ -45,7 +45,7 @@ const RegisterForm = () => {
         'https://backendtest-nu.vercel.app/email',
          email 
       );
-      return response.data.message === 'Email Available';
+      return response.data.message === 'Email available';
     } catch (error) {
       return false; // Email exists if error occurs
     }
