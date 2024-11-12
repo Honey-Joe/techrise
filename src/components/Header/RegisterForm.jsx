@@ -103,7 +103,6 @@ const RegisterForm = () => {
                 id=""
                 placeholder="email"
                 {...register("email", {
-                  required: "Email is required",
                   validate: async (value) => {
                     const isAvailable = await checkEmailExists(value);
                     if (!isAvailable) {
