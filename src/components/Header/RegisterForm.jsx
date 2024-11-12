@@ -43,7 +43,7 @@ const RegisterForm = () => {
     try {
       const response = await axios.post(
         'https://backendtest-nu.vercel.app/email',
-        { email }
+         email 
       );
       return response.data.message === 'Email available';
     } catch (error) {
