@@ -140,11 +140,12 @@ const Header = () => {
                   <Dialog
                     isShown={isDialog}
                     title="Registration Form"
-                    hasFooter={false}
                     onCloseComplete={() => setIsDialog(false)}
                     className="bg-[#08123B]"
                     background="#000"
                     width={400}
+                    hasClose = {true}
+                    hasFooter = {false}
                   >
                     <RegisterForm></RegisterForm>
                   </Dialog>

@@ -17,6 +17,10 @@ const RegisterForm = () => {
         const isAvailable = await checkEmailExists(email);
         return isAvailable;
       }, { message: "Email already exists" }),
+      name: z.string().min(1, {message:"Enter your Name"}),
+      college: z.string().min(1, {message:"Enter your College Name"}),
+      dept: z.string().min(1, {message:"Enter your Department"})
+
     // Other fields like password can be added here
   });
   const checkEmailExists = async (email) => {
@@ -70,7 +74,7 @@ const RegisterForm = () => {
 
  
 
-  const onsubmit = async (data) => {
+   const onsubmit = async (data) => {
     try {
       // Post data using Axios
       const response = await axios.post(
@@ -95,7 +99,7 @@ const RegisterForm = () => {
         action=""
         method="post"
         onSubmit={handleSubmit(onsubmit)}
-        className="w-full"
+        className="w-full py-5"
       >
         <div className="flex justify-center">
           <div className="flex flex-col gap-5 justify-center items-center ">
@@ -114,6 +118,7 @@ const RegisterForm = () => {
                 {...register("name")}
                 className="shadow-md border p-3 rounded-md w-full"
               />
+              <p className="text-red-500">{errors.name?.message}</p>
             </div>
             <div className="flex flex-col gap-2 justify-center items-start">
               <label
@@ -147,6 +152,7 @@ const RegisterForm = () => {
                 {...register("college")}
                 className="shadow-md border pr-28 pl-3 py-3 rounded-lg"
               />
+              <p className="text-red-500">{errors.college?.message}</p>
             </div>
             <div className="flex flex-col gap-2 justify-center items-start">
               <label
@@ -163,7 +169,7 @@ const RegisterForm = () => {
                 {...register("dept")}
                 className="shadow-md border pr-28 pl-3 py-3 rounded-lg"
               />
-
+              <p className="text-red-500">{errors.dept?.message}</p>
             </div>
             <div className="flex flex-col gap-2 w-full">
               <label className="font-[Fredoka] font-medium text-[20px]">Technical Event</label>
@@ -196,7 +202,7 @@ const RegisterForm = () => {
               </select>
             </div>
 
-            <button type="submit" className="border rounded-lg px-5 py-2" onCloseComplete={() => setIsDialog(false)} >
+            <button type="submit" className="border rounded-lg px-10 py-3 bg-black text-white  shadow-lg "  >
               Submit
             </button>
           </div>
