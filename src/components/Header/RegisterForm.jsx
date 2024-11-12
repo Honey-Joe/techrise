@@ -66,7 +66,7 @@ const RegisterForm = () => {
 
   const checkEmailExists = async (email) => {
     try {
-      const response = await axios.post('https://backendtest-nu.vercel.app/?vercelToolbarCode=l6xoaVPekClcrjz/email', { email });
+      const response = await axios.post('https://backendtest-nu.vercel.app/?vercelToolbarCode=l6xoaVPekClcrjz/email',  email );
       return response.data.message === "Email available";
     } catch (error) {
       return false; // Email exists if error occurs
