@@ -5,7 +5,17 @@ import { useEffect, useState } from "react";
 
 
 const RegisterForm = () => {
-
+  const checkEmailExists = async (email) => {
+    try {
+      const response = await axios.post(
+        'https://backendtest-nu.vercel.app/email',
+        { email }
+      );
+      return response.data.message === 'Email available';
+    } catch (error) {
+      return false; // Email exists if error occurs
+    }
+  };
   
   const [selectedOption1, setSelectedOption1] = useState("");
 
