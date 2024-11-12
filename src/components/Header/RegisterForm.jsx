@@ -14,7 +14,7 @@ const RegisterForm = () => {
     .email("Invalid email address")
     .refine(async (email) => {
       const isAvailable = await checkEmailExists(email);
-      return isAvailable;
+      return !isAvailable;
     }, { message: "Email already exists" }),
     name: z.string().min(1, {message:"Enter Your Name"}),
     college: z.string().min(1, {message:"Enter Your College Name"}),
