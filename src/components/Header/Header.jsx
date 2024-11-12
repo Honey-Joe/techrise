@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu } from "lucide-react";
 import CountdownTimer from "../Contdown/CountDown";
-import axios from "axios"
-import { useForm } from 'react-hook-form';
+
 import { Button, Dialog, Pane, Paragraph, SideSheet } from "evergreen-ui";
 import "./baackground.css";
 import RegisterForm from "./RegisterForm";
