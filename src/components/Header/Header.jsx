@@ -12,8 +12,8 @@ const Header = () => {
   return (
     <>
       <div className="">
-        <div className="h-screen overflow-hidden" id="main">
-          <div className="area overflow-hidden">
+        <div className="h-screen " id="main">
+          <div className="area">
             <ul className="circles">
               <li></li>
               <li></li>
