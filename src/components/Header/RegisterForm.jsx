@@ -84,7 +84,7 @@ const RegisterForm = () => {
         "https://backendtest-nu.vercel.app/",
         data
       );
-       setIsDialog(true)
+      
       return (
         <>
         <Pane>
@@ -252,7 +252,7 @@ const RegisterForm = () => {
 
             <button
               type="submit"
-              
+              onClick={() => setIsDialog(true)}
               className="border rounded-lg px-10 py-3 bg-black text-white  shadow-lg "
             >
               Submit
