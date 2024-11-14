@@ -6,6 +6,7 @@ import Schedule from "../Schedule/Schedule";
 import Map from "../Map/Map";
 import Aos from "aos";
 import "aos/dist/aos.css"
+import Faq from "../Faq/Faq";
 
 const Body = () => {
   useEffect(()=>{
@@ -24,6 +25,9 @@ const Body = () => {
       </div>
       <div>
         <Schedule></Schedule>
+      </div>
+      <div>
+        <Faq></Faq>
       </div>
       <div>
         <Map></Map>

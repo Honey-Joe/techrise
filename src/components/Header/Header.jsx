@@ -13,8 +13,8 @@ const Header = () => {
     <>
       <div className="">
         <div className="h-screen overflow-hidden" id="main">
-          <div class="area overflow-hidden">
-            <ul class="circles">
+          <div className="area overflow-hidden">
+            <ul className="circles">
               <li></li>
               <li></li>
               <li></li>
