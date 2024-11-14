@@ -96,7 +96,7 @@ const Header = () => {
             </div>
           </div>
           <div className="w-[90%] lg:w-[70%] mx-auto grid grid-cols-1  h-screen">
-            <div className="text-white font-bold text-center flex flex-col items-center justify-center pt-10 lg:pt-20">
+            <div className="text-white font-bold text-center flex flex-col items-center justify-center lg:pt-20">
               <p className="font-[Fredoka] text-[26px] lg:text-[52px] text-center font-bold text-[#fbe072]">
                 DEPARTMENT OF COMPUTER SCIENCE
               </p>
