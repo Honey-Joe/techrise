@@ -4,9 +4,12 @@ import { useForm } from "react-hook-form";
 import { useEffect, useState } from "react";
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { Button, Dialog, Pane, Paragraph, SideSheet } from "evergreen-ui";
+
 
 
 const RegisterForm = () => {
+  const [isDialog, setIsDialog] = useState(false);
 
   const schema = z.object({
     email: z
@@ -80,10 +83,18 @@ const RegisterForm = () => {
         "https://backendtest-nu.vercel.app/",
         data
       );
-      alert("Form submitted successfully!");
       return (
         <>
-          <div></div>
+          <Dialog
+                    isShown={isDialog}
+                    title="TechX 24"
+                    onCloseComplete={() => setIsDialog(false)}
+                    hasFooter = {true}
+                  >
+                    <div>
+                      <p>Congratulation ! You're registered to TECHX'24</p>
+                    </div>
+                  </Dialog>
         </>
       );
     } catch (error) {
