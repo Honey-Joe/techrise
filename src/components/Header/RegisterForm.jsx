@@ -87,23 +87,7 @@ const RegisterForm = () => {
       setIsDialog(true);
       
     } catch (error) {
-      return (
-        <>
-        <Pane>
-          <Dialog
-            isShown={isDialog}
-            title="TechX 24"
-            onCloseComplete={() => setIsDialog(false)}
-            hasFooter={true}
-          >
-            <div>
-              <p>Sorry ! Technical Issue , Contact Us for regitration</p>
-            </div>
-          </Dialog>
-
-        </Pane>
-        </>
-      );
+      alert("Form Not Submitted")
     }
 
     reset();
@@ -249,7 +233,7 @@ const RegisterForm = () => {
             hasFooter={true}
           >
             <div>
-              <p>Congratulation ! You're registered to TECHX'24</p>
+              <p className="font-[Fredoka] text-[20px] font-bold">Congratulation ! You're registered to TECHX'24</p>
             </div>
           </Dialog>
 
