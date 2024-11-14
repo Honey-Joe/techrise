@@ -85,19 +85,7 @@ const RegisterForm = () => {
         data
       );
       setIsDialog(true);
-      <Pane>
-          <Dialog
-            isShown={isDialog}
-            title="TechX 24"
-            onCloseComplete={() => setIsDialog(false)}
-            hasFooter={true}
-          >
-            <div>
-              <p>Congratulation ! You're registered to TECHX'24</p>
-            </div>
-          </Dialog>
-
-        </Pane>
+      
     } catch (error) {
       return (
         <>
@@ -253,6 +241,19 @@ const RegisterForm = () => {
             >
               Submit
             </button>
+            <Pane>
+          <Dialog
+            isShown={isDialog}
+            title="TechX 24"
+            onCloseComplete={() => setIsDialog(false)}
+            hasFooter={true}
+          >
+            <div>
+              <p>Congratulation ! You're registered to TECHX'24</p>
+            </div>
+          </Dialog>
+
+        </Pane>
           </div>
         </div>
       </form>
