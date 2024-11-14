@@ -27,7 +27,7 @@ const RegisterForm = () => {
     try {
       const response = await axios.post(
         'https://backendtest-nu.vercel.app/email',
-        { email }
+         email 
       );
       return response.data.message === 'Email available';
     } catch (error) {
@@ -47,7 +47,7 @@ const RegisterForm = () => {
     "Code Crack": ["Tech Link"],
     "Web Maestro": ["Quiet Quest"],
     "Quiz Quest": ["Design Dazzle"],
-    InnovExhibit: ["Quiet Quest", "Tech Link"],
+    "InnovExhibit": ["Quiet Quest", "Tech Link"],
   };
 
   // Function to handle selection change in the first select
