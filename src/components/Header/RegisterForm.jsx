@@ -84,10 +84,7 @@ const RegisterForm = () => {
         "https://backendtest-nu.vercel.app/",
         data
       );
-      
-      return (
-        <>
-        <Pane>
+      <Pane>
           <Dialog
             isShown={isDialog}
             title="TechX 24"
@@ -100,8 +97,6 @@ const RegisterForm = () => {
           </Dialog>
 
         </Pane>
-        </>
-      );
     } catch (error) {
       return (
         <>
@@ -122,7 +117,7 @@ const RegisterForm = () => {
       );
     }
 
-    reset;
+    reset();
   };
 
   return (
