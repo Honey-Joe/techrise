@@ -89,7 +89,8 @@ const RegisterForm = () => {
     } catch (error) {
       alert("Form submission failed.");
     }
-    reset();
+    
+    reset;
   };
  
   return (
