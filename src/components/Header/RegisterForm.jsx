@@ -2,11 +2,9 @@ import React from "react";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import { useEffect, useState } from "react";
-import { z } from 'zod';
-import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { Button, Dialog, Pane, Paragraph, SideSheet } from "evergreen-ui";
-
-
 
 const RegisterForm = () => {
   const [isDialog, setIsDialog] = useState(false);
@@ -15,28 +13,31 @@ const RegisterForm = () => {
     email: z
       .string()
       .email("Invalid email address")
-      .refine(async (email) => {
-        const isAvailable = await checkEmailExists(email);
-        return isAvailable;
-      }, { message: "Email already exists" }),
-      name: z.string().min(1, {message:"Enter your Name"}),
-      college: z.string().min(1, {message:"Enter your College Name"}),
-      dept: z.string().min(1, {message:"Enter your Department"})
+      .refine(
+        async (email) => {
+          const isAvailable = await checkEmailExists(email);
+          return isAvailable;
+        },
+        { message: "Email already exists" }
+      ),
+    name: z.string().min(1, { message: "Enter your Name" }),
+    college: z.string().min(1, { message: "Enter your College Name" }),
+    dept: z.string().min(1, { message: "Enter your Department" }),
 
     // Other fields like password can be added here
   });
   const checkEmailExists = async (email) => {
     try {
       const response = await axios.post(
-        'https://backendtest-nu.vercel.app/email',
-         {email}
+        "https://backendtest-nu.vercel.app/email",
+        { email }
       );
-      return response.data.message === 'Email Available';
+      return response.data.message === "Email Available";
     } catch (error) {
       return false; // Email exists if error occurs
     }
   };
-  
+
   const [selectedOption1, setSelectedOption1] = useState("");
 
   // List of options for each select
@@ -49,14 +50,14 @@ const RegisterForm = () => {
     "Code Crack": ["Tech Link"],
     "Web Maestro": ["Quiet Quest"],
     "Quiz Quest": ["Design Dazzle"],
-    "InnovExhibit": ["Quiet Quest", "Tech Link"],
+    InnovExhibit: ["Quiet Quest", "Tech Link"],
   };
 
   // Function to handle selection change in the first select
   const handleSelect1Change = (event) => {
     setSelectedOption1(event.target.value);
   };
- 
+
   // State for the second select
   const [selectedOption2, setSelectedOption2] = useState("");
 
@@ -65,18 +66,18 @@ const RegisterForm = () => {
   };
 
   const [data, setData] = useState([]);
-  const { reset, register, control, handleSubmit, formState:{errors} } = useForm({
+  const {
+    reset,
+    register,
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
     mode: "onChange",
-    resolver: zodResolver(schema)
+    resolver: zodResolver(schema),
   });
 
-  
-
-  
-
- 
-
-   const onsubmit = async (data) => {
+  const onsubmit = async (data) => {
     try {
       // Post data using Axios
       const response = await axios.post(
@@ -85,25 +86,44 @@ const RegisterForm = () => {
       );
       return (
         <>
+        <Pane>
           <Dialog
-                    isShown={isDialog}
-                    title="TechX 24"
-                    onCloseComplete={() => setIsDialog(false)}
-                    hasFooter = {true}
-                  >
-                    <div>
-                      <p>Congratulation ! You're registered to TECHX'24</p>
-                    </div>
-                  </Dialog>
+            isShown={isDialog}
+            title="TechX 24"
+            onCloseComplete={() => setIsDialog(false)}
+            hasFooter={true}
+          >
+            <div>
+              <p>Congratulation ! You're registered to TECHX'24</p>
+            </div>
+          </Dialog>
+
+        </Pane>
         </>
       );
     } catch (error) {
-      alert("Form submission failed.");
+      return (
+        <>
+        <Pane>
+          <Dialog
+            isShown={isDialog}
+            title="TechX 24"
+            onCloseComplete={() => setIsDialog(false)}
+            hasFooter={true}
+          >
+            <div>
+              <p>Sorry ! Technical Issue , Contact Us for regitration</p>
+            </div>
+          </Dialog>
+
+        </Pane>
+        </>
+      );
     }
-    
+
     reset;
   };
- 
+
   return (
     <div>
       <form
@@ -146,7 +166,9 @@ const RegisterForm = () => {
                 {...register("email")}
                 className="shadow-md border pr-28 pl-3 py-3 rounded-lg"
               />
-        {errors.email && <p style={{ color: 'red' }}>{errors.email.message}</p>}
+              {errors.email && (
+                <p style={{ color: "red" }}>{errors.email.message}</p>
+              )}
             </div>
             <div className="flex flex-col gap-2 justify-center items-start">
               <label
@@ -183,8 +205,15 @@ const RegisterForm = () => {
               <p className="text-red-500">{errors.dept?.message}</p>
             </div>
             <div className="flex flex-col gap-2 w-full">
-              <label className="font-[Fredoka] font-medium text-[20px]">Technical Event</label>
-              <select {...register("event1")} value={selectedOption1} onChange={handleSelect1Change} className="shadow-md border pr-28 pl-3 py-3 rounded-lg">
+              <label className="font-[Fredoka] font-medium text-[20px]">
+                Technical Event
+              </label>
+              <select
+                {...register("event1")}
+                value={selectedOption1}
+                onChange={handleSelect1Change}
+                className="shadow-md border pr-28 pl-3 py-3 rounded-lg"
+              >
                 <option value="">Select an option</option>
                 {options1.map((option) => (
                   <option key={option} value={option}>
@@ -195,8 +224,15 @@ const RegisterForm = () => {
             </div>
 
             <div className="flex flex-col gap-2 w-full">
-              <label className="font-[Fredoka] font-medium text-[20px]">Non Technical Event</label>
-              <select {...register("event2")} value={selectedOption2} onChange={handleSelect2Change} className="shadow-md border pr-28 pl-3 py-3 rounded-lg">
+              <label className="font-[Fredoka] font-medium text-[20px]">
+                Non Technical Event
+              </label>
+              <select
+                {...register("event2")}
+                value={selectedOption2}
+                onChange={handleSelect2Change}
+                className="shadow-md border pr-28 pl-3 py-3 rounded-lg"
+              >
                 <option value="">Select an option</option>
                 {options2.map((option) => (
                   <option
@@ -213,7 +249,10 @@ const RegisterForm = () => {
               </select>
             </div>
 
-            <button type="submit" className="border rounded-lg px-10 py-3 bg-black text-white  shadow-lg "  >
+            <button
+              type="submit"
+              className="border rounded-lg px-10 py-3 bg-black text-white  shadow-lg "
+            >
               Submit
             </button>
           </div>
