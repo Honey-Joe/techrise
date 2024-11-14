@@ -25,10 +25,7 @@ const  appRouter = createBrowserRouter([
     path:"/event",
     element:<EventDeatailsCard></EventDeatailsCard>
   },
-  {
-    path:"/:ev",
-    element:<EventDetails></EventDetails>
-  }
+  
  
 ])
 const root= ReactDOM.createRoot(document.getElementById("root"));
