@@ -4,17 +4,7 @@ import axios from 'axios'
 
 const EventDeatailsCard = (props) => {
     
-    const [Eventdata, setEventData] = useState();
-
-    const fetechData = async() =>{
-        const res = await axios.get("https://backendtest-nu.vercel.app/event");
-        setEventData(res.data);
-        console.log(res.data);
-
-    }
-    useEffect(()=>{
-        fetechData();
-    },[]);
+   
   return (
     <div>
         <div class="flex flex-wrap justify-center py-8 px-4 bg-[#08123B]">
