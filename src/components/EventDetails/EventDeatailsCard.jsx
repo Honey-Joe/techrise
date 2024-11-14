@@ -9,7 +9,7 @@ const EventDeatailsCard = (props) => {
     const fetechData = async() =>{
         const res = await axios.get("https://backendtest-nu.vercel.app/event");
         setEventData(res.data);
-        console.log(res.data.eventname);
+        console.log(res.data?.eventname);
 
     }
     useEffect(()=>{
