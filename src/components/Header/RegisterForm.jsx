@@ -7,7 +7,6 @@ import { zodResolver } from '@hookform/resolvers/zod';
 
 
 const RegisterForm = () => {
-  const [isDialog, setIsDialog] = useState(false);
 
   const schema = z.object({
     email: z
@@ -27,12 +26,11 @@ const RegisterForm = () => {
     try {
       const response = await axios.post(
         'https://backendtest-nu.vercel.app/email',
-         email 
+         {email}
       );
       return response.data.message === 'Email Available';
     } catch (error) {
       return false; // Email exists if error occurs
-      console.log(e);
     }
   };
   
