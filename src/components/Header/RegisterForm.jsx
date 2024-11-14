@@ -32,6 +32,7 @@ const RegisterForm = () => {
       return response.data.message === 'Email available';
     } catch (error) {
       return false; // Email exists if error occurs
+      console.log(e);
     }
   };
   
