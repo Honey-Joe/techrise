@@ -84,6 +84,7 @@ const RegisterForm = () => {
         "https://backendtest-nu.vercel.app/",
         data
       );
+      setIsDialog(true);
       <Pane>
           <Dialog
             isShown={isDialog}
