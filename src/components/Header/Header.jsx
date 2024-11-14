@@ -95,8 +95,8 @@ const Header = () => {
               </Button>
             </div>
           </div>
-          <div className="w-[90%] lg:w-[70%] justify-center  mx-auto  items-center grid grid-cols-1 h-screen pt-10">
-            <div className="text-white font-bold text-center">
+          <div className="w-[90%] lg:w-[70%] mx-auto grid grid-cols-1  h-screen">
+            <div className="text-white font-bold text-center flex flex-col items-center justify-center pt-10 lg:pt-20">
               <p className="font-[Fredoka] text-[26px] lg:text-[52px] text-center font-bold text-[#fbe072]">
                 DEPARTMENT OF COMPUTER SCIENCE
               </p>
