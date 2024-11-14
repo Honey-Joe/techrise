@@ -23,7 +23,7 @@ const  appRouter = createBrowserRouter([
   },
   {
     path:"/ev",
-    element:<EventDetails></EventDetails>
+    element:<EventDeatailsCard></EventDeatailsCard>
   },
   
  
