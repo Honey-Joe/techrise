@@ -1,4 +1,4 @@
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Link } from "lucide-react";
 import { Eventlistdata } from "../../API/Eventlistdata";
 import Eventlistcard from "./EventlistCard";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -69,6 +69,8 @@ const Eventlist = () => {
                 {Eventlistdata.map((e) => {
                   return (
                     <SwiperSlide>
+                      <Link to={"/ev"}>
+                      
                     <Eventlistcard
                       imgurl={e.imgurl}
                       tag={e.tag}
@@ -78,6 +80,7 @@ const Eventlist = () => {
                       blogtitle={e.blogtitle}
                       authorname={e.authorname}
                     ></Eventlistcard>
+                      </Link>
                     </SwiperSlide>
                   );
                 })}
