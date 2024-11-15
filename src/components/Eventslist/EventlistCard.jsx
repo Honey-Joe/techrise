@@ -28,7 +28,7 @@ const Eventlistcard = (props) => {
             </div>
             
             <div className="flex justify-center">
-              <Link to={"/event" + props.eventid}>
+              <Link to={"/event/" + props.eventid}>
               <div>
                 <a
                   href="#_"
