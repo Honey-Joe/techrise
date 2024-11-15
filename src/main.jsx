@@ -24,7 +24,10 @@ const  appRouter = createBrowserRouter([
   {
     path:"/event",
     element:<EventDetails></EventDetails>
-  },
+  },{
+    path:"/test",
+    element:<EventDeatailsCard></EventDeatailsCard>
+  }
   
  
 ])
