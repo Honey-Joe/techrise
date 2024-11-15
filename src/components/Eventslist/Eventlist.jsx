@@ -83,6 +83,7 @@ const Eventlist = () => {
                     <Eventlistcard
                       imgurl={e.eventurl}
                       blogtitle={e.eventname}
+                      eventid = {e.eventid}
                     ></Eventlistcard>
                     
                     </SwiperSlide>
