@@ -4,8 +4,8 @@ import Header from "./components/Header/Header";
 import Body from "./components/Body/Body";
 import Footer from "./components/Footer.jsx/Footer";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import EventDetails from "./components/EventDetails/EventDetails";
 import EventDeatailsCard from "./components/EventDetails/EventDeatailsCard";
+import EventDetails from "./components/EventDetails/EventDetails";
 
 const Applayout = ()=>{
   return(
@@ -23,7 +23,7 @@ const  appRouter = createBrowserRouter([
   },
   {
     path:"/event",
-    element:<EventDeatails></EventDeatails>
+    element:<EventDetails></EventDetails>
   },
   
  
