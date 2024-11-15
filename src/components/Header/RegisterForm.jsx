@@ -1,10 +1,9 @@
-import React from "react";
 import axios from "axios";
 import { useForm } from "react-hook-form";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Button, Dialog, Pane, Paragraph, SideSheet } from "evergreen-ui";
+import {  Dialog, Pane } from "evergreen-ui";
 
 const RegisterForm = () => {
   const [isDialog, setIsDialog] = useState(false);
@@ -33,7 +32,7 @@ const RegisterForm = () => {
         { email }
       );
       return response.data.message === "Email Available";
-    } catch (error) {
+    } catch (er) {
       return false; // Email exists if error occurs
     }
   };

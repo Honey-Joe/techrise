@@ -1,7 +1,6 @@
-import { ArrowRight, ChevronRight, Plus } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
-import { Link } from "react-router-dom";
 
 const Eventlistcard = (props) => {
   return (

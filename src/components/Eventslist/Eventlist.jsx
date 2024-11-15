@@ -1,4 +1,3 @@
-import { ChevronRight } from "lucide-react";
 import { Eventlistdata } from "../../API/Eventlistdata";
 import Eventlistcard from "./EventlistCard";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -9,14 +8,20 @@ import { EffectCoverflow, Pagination } from "swiper/modules";
 import './styles.css';
 import Aos from "aos";
 import "aos/dist/aos.css"
-import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 
 const Eventlist = () => {
+  const [data,setData] = useState([]);
 
-
+  const fetchdata = async()=>{
+    const res = await axios.get("https://backendtest-nu.vercel.app/event");
+    setData(res.data)
+  }
+ 
   useEffect(()=>{
+    fetchdata();
     Aos.init();
   },[])
   return (
@@ -69,22 +74,19 @@ const Eventlist = () => {
               }}
             >
               
-                {Eventlistdata.map((e) => {
+                {data.map((e) => {
                   return (
+                    <>
                     <SwiperSlide>
                       
                       
                     <Eventlistcard
-                      imgurl={e.imgurl}
-                      tag={e.tag}
-                      designation={e.designation}
-                      date={e.date}
-                      authorimg={e.authorimg}
-                      blogtitle={e.blogtitle}
-                      authorname={e.authorname}
+                      imgurl={e.eventurl}
+                      authorname={e.eventname}
                     ></Eventlistcard>
                     
                     </SwiperSlide>
+                    </>
                   );
                 })}
             
