@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import EventDeatailsCard from './EventDeatailsCard'
-import { useParams } from 'react-router-dom'
+import { useEffect } from 'react';
 
 
 const EventDetails = () => {
