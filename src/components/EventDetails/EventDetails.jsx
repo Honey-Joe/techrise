@@ -23,16 +23,7 @@ const EventDetails = () => {
   return (
     <div>
         <div>
-            {
-                EventData.map((e)=>{
-                    return(
-                        <EventDeatailsCard
-                            eventname = {e.eventname}
-                            eventdesc = {e.eventdesc}
-                        ></EventDeatailsCard>
-                    )
-                })
-            }
+            <p>{EventData?.eventid}</p>
         </div>
     </div>
   )
