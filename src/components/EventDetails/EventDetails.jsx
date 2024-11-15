@@ -5,11 +5,36 @@ import axios from 'axios';
 
 
 const EventDetails = () => {
-    
+    const [data,setData] = useState([]);
+
+    const fetchdata = async()=>{
+        try{
+            const res =await axios.get("https://backendtest-nu.vercel.app/event");
+            console.log(res.data)
+            setData(res.data);
+        }
+        catch(e){
+            console.log(e);
+        }
+    }
+    useEffect(()=>{
+        fetchdata();
+    },[])
   return (
     <div>
         <div>
-            <p>{}</p>
+            {
+                data.map((e)=>{
+                    return(
+                        <>
+                            <EventDeatailsCard
+                                eventname={e.eventname}
+                                eventdesc={e.eventdesc}
+                            ></EventDeatailsCard>
+                        </>
+                    )
+                })
+            }
         </div>
     </div>
   )

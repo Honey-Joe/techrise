@@ -3,31 +3,11 @@ import { useParams } from 'react-router-dom'
 import axios from 'axios'
 
 const EventDeatailsCard = (props) => {
-    const [data,setData] = useState([]);
-
-    const fetchdata = async()=>{
-        try{
-            const res =await axios.get("https://backendtest-nu.vercel.app/event");
-            console.log(res.data)
-            setData(res.data);
-        }
-        catch(e){
-            console.log(e);
-        }
-    }
-    useEffect(()=>{
-        fetchdata();
-    },[])
+    
     
   return (
     <div>
-            {data.map((e)=>{
-                return(
-                    <>
-                    <p>{e.eventid}</p>
-                    </>
-                )
-            })}
+            {props.eventid}
 
         {/* <div className="flex flex-wrap justify-center py-8 px-4 bg-[#08123B]">
         <div className="w-full md:w-5/12 p-4 transition duration-500 ease-in-out transform hover:scale-105">
