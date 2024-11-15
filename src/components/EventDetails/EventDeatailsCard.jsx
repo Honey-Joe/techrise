@@ -17,7 +17,7 @@ const EventDeatailsCard = (props) => {
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-Fredoka pulse bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">{props.eventname}
                 </h1>
             <h2 className="text-2xl sm:text-3xl mt-4 font-Fredoka">Debugging</h2>
-            <p className="text-md sm:text-lg mt-6 leading-relaxed font-Fredoka">{props.even}
+            <p className="text-md sm:text-lg mt-6 leading-relaxed font-Fredoka">{props.eventdesc}
             </p>
         </div>
     </div>
