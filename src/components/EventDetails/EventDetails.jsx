@@ -11,7 +11,7 @@ const EventDetails = () => {
         try{
             const res =await axios.get("https://backendtest-nu.vercel.app/event");
             console.log(res.data)
-            setEventData(res.data)
+            setEventData(res.data.data)
         }
         catch(e){
             console.log(e);
