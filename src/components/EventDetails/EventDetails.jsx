@@ -17,10 +17,17 @@ const EventDetails = () => {
    
     useEffect(()=>{
       fetchdata();
-    },[])
+    },[Eventdata])
   return (
     <div>
         <p>event Details</p>
+        <p>{Eventdata.map((e)=>{
+            return(
+                <>
+                    <p>{e.eventname}</p>
+                    </>
+            )
+        })}</p>
     </div>
   )
 }
