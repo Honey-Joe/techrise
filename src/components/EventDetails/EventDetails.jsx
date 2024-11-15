@@ -23,7 +23,7 @@ const EventDetails = () => {
   return (
     <div>
         <div>
-            <p>{EventData?.eventid}</p>
+            <p>{EventData.eventid}</p>
         </div>
     </div>
   )
