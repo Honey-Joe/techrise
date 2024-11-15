@@ -22,7 +22,7 @@ const EventDeatailsCard = (props) => {
     
   return (
     <div>
-       
+       {data.eventname}
     </div>
   )
 }
