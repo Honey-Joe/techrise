@@ -14,6 +14,8 @@ import { Link } from "react-router-dom";
 
 
 const Eventlist = () => {
+
+
   useEffect(()=>{
     Aos.init();
   },[])
@@ -23,7 +25,7 @@ const Eventlist = () => {
         <div className="w-[100%] mx-auto grid grid-cols-1 py-10 gap-5" data-aos="fade-up-right" data-aos-delay="300">
           <div className="flex justify-center">
             <div className="">
-              <h5 class="flex  items-center justify-center gap-3">
+              <h5 className="flex  items-center justify-center gap-3">
                 <p className="font-[Fredoka] text-[32px]  md:text-[22px] lg:text-[24px] font-semibold text-white ">
                   Events
                 </p>
