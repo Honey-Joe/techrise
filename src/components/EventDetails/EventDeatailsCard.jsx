@@ -3,18 +3,20 @@ import { useParams } from 'react-router-dom'
 import axios from 'axios'
 
 const EventDeatailsCard = (props) => {
-    
-    const [Eventdata, setEventData] = useState();
+   
+    const [EventData, setEventData] = useState();
 
-    const fetechData = async() =>{
-        const res = await axios.get("https://backendtest-nu.vercel.app/event");
-        setEventData(res.data);
-        console.log(res.data?.eventname);
+    const fetchdata = async()=>{
+        try{
+            const res =await axios.get("https://backendtest-nu.vercel.app/event");
+            console.log(res.data)
+        }
+        catch(e){
+            console.log(e);
+        }
 
     }
-    useEffect(()=>{
-        fetechData();
-    },[]);
+    fetchdata();
   return (
     <div>
         <div class="flex flex-wrap justify-center py-8 px-4 bg-[#08123B]">
@@ -22,7 +24,7 @@ const EventDeatailsCard = (props) => {
             <img src="Asset/brochure.jpeg" class="rounded-lg w-full h-64 sm:h-80 md:h-96 object-cover shadow-lg" alt="Event Brochure" />
         </div>
         <div class="w-full md:w-6/12 p-4 mt-6 md:mt-0 text-center md:text-left">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold font-Fredoka pulse bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">{}=</h1>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold font-Fredoka pulse bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">{props.eventname}</h1>
             <h2 class="text-2xl sm:text-3xl mt-4 font-Fredoka">Debugging</h2>
             <p class="text-md sm:text-lg mt-6 leading-relaxed font-Fredoka">
                 {props.eventdesc}
