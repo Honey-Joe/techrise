@@ -17,7 +17,6 @@ const EventDeatailsCard = (props) => {
         }
 
     }
-    fetchdata();
   return (
     <div>
         <div class="flex flex-wrap justify-center py-8 px-4 bg-[#08123B]">
