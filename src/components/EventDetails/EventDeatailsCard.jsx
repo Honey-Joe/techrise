@@ -9,7 +9,7 @@ const EventDeatailsCard = (props) => {
     const fetchdata = async()=>{
         try{
             const res =await axios.get("https://backendtest-nu.vercel.app/event");
-            console.log(res.data)
+            console.log(res.data.eventid)
             setEventData(res.data)
         }
         catch(e){
@@ -17,7 +17,9 @@ const EventDeatailsCard = (props) => {
         }
 
     }
-    fetchdata();
+    useEffect(()=>{
+        fetchdata();
+    },[])
   return (
     <div>
         <div class="flex flex-wrap justify-center py-8 px-4 bg-[#08123B]">
