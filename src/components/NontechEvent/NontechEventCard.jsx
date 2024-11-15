@@ -27,7 +27,7 @@ const Eventlistcard = (props) => {
               </p>
             </div>
             <div className="flex justify-center">
-              <Link to={"/event"}>
+              
               
               <div>
                 <a
@@ -42,7 +42,7 @@ const Eventlistcard = (props) => {
                   </span>
                 </a>
               </div>
-              </Link>
+             
             </div>
           </div>
         </div>
