@@ -82,7 +82,7 @@ const Eventlist = () => {
                       
                     <Eventlistcard
                       imgurl={e.eventurl}
-                      authorname={e.eventname}
+                      blogtitle={e.eventname}
                     ></Eventlistcard>
                     
                     </SwiperSlide>
