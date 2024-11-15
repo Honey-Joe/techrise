@@ -7,7 +7,7 @@ const EventDeatailsCard = (props) => {
     
   return (
     <div>
-            {props.eventid}
+            {props.eventname}
 
         {/* <div className="flex flex-wrap justify-center py-8 px-4 bg-[#08123B]">
         <div className="w-full md:w-5/12 p-4 transition duration-500 ease-in-out transform hover:scale-105">
