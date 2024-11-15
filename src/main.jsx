@@ -4,6 +4,7 @@ import Header from "./components/Header/Header";
 import Body from "./components/Body/Body";
 import Footer from "./components/Footer.jsx/Footer";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import EventDetails from "./components/EventDetails/EventDetails";
 
 
 const Applayout = ()=>{
@@ -19,6 +20,10 @@ const  appRouter = createBrowserRouter([
   {
     path:"/",
     element:<Applayout></Applayout>
+  },
+  {
+    path:"/event/:eventid",
+    element:<EventDetails></EventDetails>
   }
   
  
