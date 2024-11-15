@@ -1,6 +1,7 @@
 import { ArrowRight, ChevronRight, Plus } from "lucide-react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import { Link } from "react-router-dom";
 
 const Eventlistcard = (props) => {
   return (
@@ -26,6 +27,7 @@ const Eventlistcard = (props) => {
               </p>
             </div>
             <div className="flex justify-center">
+              <Link to={"/event"}>
               
               <div>
                 <a
@@ -40,6 +42,7 @@ const Eventlistcard = (props) => {
                   </span>
                 </a>
               </div>
+              </Link>
             </div>
           </div>
         </div>
