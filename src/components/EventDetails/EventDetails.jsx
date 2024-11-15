@@ -1,22 +1,24 @@
-import React, { useEffect, useState } from 'react'
-import axios from 'axios'
+import React from 'react'
+import EventDeatailsCard from './EventDeatailsCard'
+import EventData from '../../API/EventData'
+import { useParams } from 'react-router-dom'
 
 
 const EventDetails = () => {
-    const [Eventdata, setEventData] = useState();
-
-    const fetechData = async() =>{
-        const res = await axios.get("https://backendtest-nu.vercel.app/event");
-        setEventData(res.data);
-        console.log(res.data);
-    }
-    useEffect(()=>{
-        fetechData();
-    },[]);
+    
   return (
     <div>
         <div>
-           {Eventdata.eventid}
+            {
+                EventData.map((e)=>{
+                    return(
+                        <EventDeatailsCard
+                            eventname = {e.eventname}
+                            eventdesc = {e.eventdesc}
+                        ></EventDeatailsCard>
+                    )
+                })
+            }
         </div>
     </div>
   )

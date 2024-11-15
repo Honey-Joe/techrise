@@ -25,6 +25,7 @@ const Eventlistcard = (props) => {
                 {props.blogtitle}
               </p>
             </div>
+            
             <div className="flex justify-center">
               
               <div>

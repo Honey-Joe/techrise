@@ -70,7 +70,7 @@ const Eventlist = () => {
                 {Eventlistdata.map((e) => {
                   return (
                     <SwiperSlide>
-                      <Link to={"/ev"}>
+                      
                       
                     <Eventlistcard
                       imgurl={e.imgurl}
@@ -81,7 +81,7 @@ const Eventlist = () => {
                       blogtitle={e.blogtitle}
                       authorname={e.authorname}
                     ></Eventlistcard>
-                      </Link>
+                    
                     </SwiperSlide>
                   );
                 })}
