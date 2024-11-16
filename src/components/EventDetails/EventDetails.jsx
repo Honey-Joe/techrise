@@ -10,7 +10,7 @@ const EventDetails = () => {
     const [Eventdata,setEventData] = useState([]);
 
     const fetchdata = async()=>{
-      const res = await axios.get("https://backendtest-nu.vercel.app/event/" + data.eventid);
+      const res = await axios.get("https://backendtest-nu.vercel.app/event/");
       setEventData(res.data)
       console.log(res.data.event);
     }
