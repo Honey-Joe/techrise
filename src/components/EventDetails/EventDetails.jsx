@@ -6,13 +6,13 @@ import EventDetailsPage from './EventDetailsPage';
 const EventDetails = () => {
 
     const datap = useParams();
-    console.log(datap.eventid);
+    console.log(datap.id);
 
     const [data,setData] = useState([]);
-    console.log(data.every);
+    
 
   const fetchdata = async()=>{
-    const res = await axios.get("https://techx-24backend.vercel.app/event/" + datap.eventid);
+    const res = await axios.get("https://techx-24backend.vercel.app/event/" + datap.id);
     setData(res.data)
     console.log(res.data);
   }
@@ -20,10 +20,11 @@ const EventDetails = () => {
   useEffect(()=>{
     fetchdata();
   },[])
+  console.log(data.event.eventid);
   return (
     <div>
         <p>event Details</p>
-        <p>{data.event.eventid}</p>
+        <p></p>
     </div>
   )
 }
