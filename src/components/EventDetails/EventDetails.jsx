@@ -12,7 +12,7 @@ const EventDetails = () => {
     const fetchdata = async()=>{
       const res = await axios.get("https://backendtest-nu.vercel.app/event/" + data.eventid);
       setEventData(res.data)
-      console.log(res.data);
+      console.log(res.data.event);
     }
    
     useEffect(()=>{
@@ -21,7 +21,7 @@ const EventDetails = () => {
   return (
     <div>
         <p>event Details</p>
-        <p>{Eventdata.event}</p>
+        <p>{Eventdata.event.eventid}</p>
     </div>
   )
 }
