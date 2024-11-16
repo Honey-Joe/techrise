@@ -6,7 +6,6 @@ import EventDetailsPage from './EventDetailsPage';
 const EventDetails = () => {
 
     const datap = useParams();
-    console.log(datap.id);
 
     const [data,setData] = useState([]);
     
