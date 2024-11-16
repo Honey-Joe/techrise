@@ -17,7 +17,7 @@ const EventDetails = () => {
    
     useEffect(()=>{
       fetchdata();
-    },[Eventdata])
+    },[])
   return (
     <div>
         <p>event Details</p>
