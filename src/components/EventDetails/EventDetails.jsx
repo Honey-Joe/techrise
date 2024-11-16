@@ -24,7 +24,7 @@ const EventDetails = () => {
   return (
     <div>
         <p>event Details</p>
-        <p>{data.event}</p>
+        <p>{data.event?.eventname}</p>
     </div>
   )
 }
