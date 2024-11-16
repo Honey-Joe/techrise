@@ -80,7 +80,7 @@ const RegisterForm = () => {
     try {
       // Post data using Axios
       const response = await axios.post(
-        "https://backendtest-nu.vercel.app/",
+        "https://backendtest-gules.vercel.app",
         data
       );
       setIsDialog(true);

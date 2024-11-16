@@ -1,27 +1,37 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import EventDetailsPage from './EventDetailsPage';
 
 const EventDetails = () => {
 
-    const data = useParams();
-    console.log(data.eventid);
+    const datap = useParams();
+    console.log(datap.eventid);
 
-    const [Eventdata,setEventData] = useState([]);
+    const [data,setData] = useState([]);
 
-    const fetchdata = async()=>{
-      const res = await axios.get("https://backendtest-nu.vercel.app/event/");
-      setEventData(res.data)
-      console.log(res.data.event);
-    }
-   
-    useEffect(()=>{
-      fetchdata();
-    },[])
+  const fetchdata = async()=>{
+    const res = await axios.get("https://backendtest-gules.vercel.app/event/" + datap.eventid);
+    setData(res.data)
+    console.log(res.data);
+  }
+ 
+  useEffect(()=>{
+    fetchdata();
+  },[])
   return (
     <div>
         <p>event Details</p>
-        <p>{Eventdata.event.eventid}</p>
+        <p>{data.map((e)=>{
+          return(
+            <>
+              <EventDetailsPage
+                eventname={e.eventname}
+              >
+              </EventDetailsPage>
+            </>
+          )
+        })}</p>
     </div>
   )
 }
