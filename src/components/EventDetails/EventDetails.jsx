@@ -8,7 +8,7 @@ const EventDetails = () => {
     const datap = useParams();
     console.log(datap.eventid);
 
-    const [data,setData] = useState([{}]);
+    const [data,setData] = useState([]);
 
   const fetchdata = async()=>{
     const res = await axios.get("https://techx-24backend.vercel.app/event/" + datap.eventid);
