@@ -22,7 +22,13 @@ const EventDetails = () => {
   return (
     <div>
         <p>event Details</p>
-        <p>{data.eventdesc}</p>
+        <p>{data.map((e)=>{
+          return(
+            <>
+              {e.eventid}
+            </>
+          )
+        })}</p>
     </div>
   )
 }
