@@ -8,7 +8,7 @@ const EventDetails = () => {
     const datap = useParams();
     console.log(datap.eventid);
 
-    const [data,setData] = useState([]);
+    const [data,setData] = useState();
 
   const fetchdata = async()=>{
     const res = await axios.get("https://backendtest-gules.vercel.app/event/" + datap.eventid);
@@ -22,7 +22,7 @@ const EventDetails = () => {
   return (
     <div>
         <p>event Details</p>
-        <p>{data.event.eventid}</p>
+        <p>{data.eventdesc}</p>
     </div>
   )
 }
