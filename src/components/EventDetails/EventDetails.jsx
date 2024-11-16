@@ -19,7 +19,7 @@ const EventDetails = () => {
   useEffect(()=>{
     fetchdata();
   },[])
-  console.log(data.event.eventid);
+  console.log(data.event);
   return (
     <div>
         <p>event Details</p>
