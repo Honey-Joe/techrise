@@ -34,6 +34,14 @@ const EventDetails = () => {
                 {data.event?.eventdesc}
             </p>
         </div>
+        <div>
+          <p>Rules</p>
+          <div>
+            <ul>
+              <li>{data.event?.rules?.r1}</li>
+            </ul>
+          </div>
+        </div>
     </div>
     </div>
   )
