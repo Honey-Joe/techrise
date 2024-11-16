@@ -18,6 +18,7 @@ const Eventlist = () => {
   const fetchdata = async()=>{
     const res = await axios.get("https://backendtest-nu.vercel.app/event");
     setData(res.data)
+    console.log(res.data);
   }
  
   useEffect(()=>{
