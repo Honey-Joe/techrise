@@ -9,13 +9,12 @@ const EventDetails = () => {
     console.log(datap.eventid);
 
     const [data,setData] = useState([]);
-    console.log(data);
+    console.log(data.every);
 
   const fetchdata = async()=>{
     const res = await axios.get("https://techx-24backend.vercel.app/event/" + datap.eventid);
     setData(res.data)
     console.log(res.data);
-    console.log(data);
   }
  
   useEffect(()=>{
@@ -24,13 +23,7 @@ const EventDetails = () => {
   return (
     <div>
         <p>event Details</p>
-        <p>{data.map((e)=>{
-          return(
-            <>
-            <p>{e.eventid}</p>
-            </>
-          )
-        })}</p>
+        <p>{data.event.eventid}</p>
     </div>
   )
 }
