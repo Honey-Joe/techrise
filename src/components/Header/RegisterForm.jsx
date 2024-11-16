@@ -28,7 +28,7 @@ const RegisterForm = () => {
   const checkEmailExists = async (email) => {
     try {
       const response = await axios.post(
-        "https://backendtest-nu.vercel.app/email",
+        "https://backendtest-gules.vercel.app/email",
         { email }
       );
       return response.data.message === "Email Available";
