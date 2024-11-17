@@ -5,6 +5,7 @@ import Body from "./components/Body/Body";
 import Footer from "./components/Footer.jsx/Footer";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import EventDetails from "./components/EventDetails/EventDetails";
+import NonEventDetails from "./components/NonEventDetails/NonEventDetails";
 
 
 const Applayout = ()=>{
@@ -24,6 +25,10 @@ const  appRouter = createBrowserRouter([
   {
     path:"/event/:id",
     element:<EventDetails></EventDetails>
+  },
+  {
+    path:"/nonevent/:id",
+    element:<NonEventDetails></NonEventDetails>
   }
   
  
