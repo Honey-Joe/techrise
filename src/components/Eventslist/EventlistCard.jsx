@@ -37,7 +37,7 @@ const Eventlistcard = (props) => {
                   <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-[#081E4C] group-hover:translate-x-0 ease">
                     <ArrowRight></ArrowRight>
                   </span>
-                  <span className="ab1solute flex items-center justify-center w-full h-full transition-all duration-300 transform group-hover:translate-x-full ease text-[12px]">
+                  <span className="ab1solute flex items-center justify-center w-full h-full transition-all duration-300 transform group-hover:translate-x-full ease text-[11px] font-[Fredoka]">
                     Rules And Regulation
                   </span>
                 </a>
