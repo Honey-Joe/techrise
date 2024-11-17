@@ -14,7 +14,7 @@ const Eventlist = () => {
 const Schedulesection = (props) => {
   return (
     <>
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 justify-center gap-5 items-center bg-[#081F4D]  py-5 rounded-lg" data-aos="fade-up-left" data-aos-delay="400">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 justify-center gap-5 items-center bg-[#081F4D]  py-6 px-0 lg:px-6 rounded-lg" data-aos="fade-up-left" data-aos-delay="400">
             <div className="flex justify-center lg:justify-normal ">
                 <p className="bg-[#118BEE] lg:px-20 lg:py-10 text-[24px] w-[90%] py-3 flex  justify-center rounded-lg font-[Fredoka] text-white font-medium">{props.time}</p>
             </div>
