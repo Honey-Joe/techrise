@@ -8,13 +8,23 @@ import './styles.css';
 import NontechEventCard from "./NontechEventCard";
 import { NonTechEventlistdata } from "../../API/NonTechEventlistdata";
 import "aos/dist/aos.css"
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Aos from "aos";
+import axios from "axios";
 
 
 
 const Eventlist = () => {
+  const [data,setData] = useState([]);
+
+  const fetchdata = async()=>{
+    const res = await axios.get("https://techx-24backend.vercel.app/nonevent");
+    setData(res.data)
+    console.log(res.data);
+  }
+ 
   useEffect(()=>{
+    fetchdata();
     Aos.init();
   },[])
   return (
@@ -63,13 +73,9 @@ const Eventlist = () => {
                   return (
                     <SwiperSlide>
                     <NontechEventCard
-                      imgurl={e.imgurl}
-                      tag={e.tag}
-                      designation={e.designation}
-                      date={e.date}
-                      authorimg={e.authorimg}
-                      blogtitle={e.blogtitle}
-                      authorname={e.authorname}
+                      imgurl={e.eventurl}
+                      blogtitle={e.eventname}
+                      eventid = {e.eventid}
                     ></NontechEventCard>
                     </SwiperSlide>
                   );

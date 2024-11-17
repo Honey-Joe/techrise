@@ -29,19 +29,21 @@ const Eventlistcard = (props) => {
             <div className="flex justify-center">
               
               
+            <Link to={"/nonevent/" + props.eventid}>
               <div>
                 <a
                   href="#_"
-                  class="relative inline-flex items-center justify-center px-16 py-5 overflow-hidden font-medium transition duration-300 ease-out border-2 border-[#081E4C] rounded-full shadow-md group"
+                  className="relative inline-flex items-center justify-center px-5 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-[#081E4C] rounded-full shadow-md group"
                 >
-                  <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-[#081E4C] group-hover:translate-x-0 ease">
+                  <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-[#081E4C] group-hover:translate-x-0 ease">
                     <ArrowRight></ArrowRight>
                   </span>
-                  <span class="absolute flex items-center justify-center w-full h-full transition-all duration-300 transform group-hover:translate-x-full ease text-[12px]">
+                  <span className="ab1solute flex items-center justify-center w-full h-full transition-all duration-300 transform group-hover:translate-x-full ease text-[12px]">
                     Rules And Regulation
                   </span>
                 </a>
-              </div>
+              </div> 
+              </Link>
              
             </div>
           </div>
