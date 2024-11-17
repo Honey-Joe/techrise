@@ -14,7 +14,7 @@ import axios from "axios";
 
 
 
-const Eventlist = () => {
+const NonTechEventlist = () => {
   const [data,setData] = useState([]);
 
   const fetchdata = async()=>{
@@ -92,4 +92,4 @@ const Eventlist = () => {
   );
 };
 
-export default Eventlist;
+export default NonTechEventlist;
