@@ -69,7 +69,7 @@ const Eventlist = () => {
               }}
             >
               
-                {NonTechEventlistdata.map((e) => {
+                {data.map((e) => {
                   return (
                     <SwiperSlide>
                     <NontechEventCard
