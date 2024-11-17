@@ -28,11 +28,11 @@ const Eventlistcard = (props) => {
             </div>
             
             <div className="flex justify-center">
-              <Link to={"/event/" + props.eventid}>
+              <Link to={"/nonevent/" + props.eventid}>
               <div>
                 <a
                   href="#_"
-                  className="relative inline-flex items-center justify-center px-16 py-5 overflow-hidden font-medium transition duration-300 ease-out border-2 border-[#081E4C] rounded-full shadow-md group"
+                  className="relative inline-flex items-center justify-center px-3 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-[#081E4C] rounded-full shadow-md group"
                 >
                   <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-[#081E4C] group-hover:translate-x-0 ease">
                     <ArrowRight></ArrowRight>
