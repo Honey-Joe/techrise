@@ -70,7 +70,7 @@ const EventDetails = () => {
                 </div>
               </div>
               <div>
-                <p className="text-3xl font-bold mb-6 text-pink-400 section-heading">
+                <p className="text-3xl font-bold mb-6 text-pink-400 section-heading text-center">
                   MAINS
                 </p>
                 <div className="grid grid-cols-1  gap-6">
