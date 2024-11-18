@@ -4,6 +4,7 @@ import {  useState } from "react";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {  Dialog, Pane } from "evergreen-ui";
+import "./register.css"
 
 const RegisterForm = () => {
   const [isDialog, setIsDialog] = useState(false);
@@ -89,11 +90,9 @@ const RegisterForm = () => {
       );
       setIsDialog(true);
       console.log(data)
-      
     } catch (error) {
       alert("Form Not Submitted")
     }
-
     reset();
   };
 
@@ -103,7 +102,7 @@ const RegisterForm = () => {
         action=""
         method="post"
         onSubmit={handleSubmit(onsubmit)}
-        className="w-full py-5"
+        className="w-full"
       >
         <div className="flex justify-center">
           <div className="flex flex-col gap-5 justify-center items-center ">
@@ -124,7 +123,7 @@ const RegisterForm = () => {
               />
               <p className="text-red-500">{errors.name?.message}</p>
             </div>
-            <div className="flex flex-col gap-2 justify-center items-start">
+            <div className="">
               <label
                 htmlFor="email "
                 className="font-[Fredoka] font-medium text-[20px]"
@@ -135,7 +134,7 @@ const RegisterForm = () => {
                 type="email"
                 name=""
                 id=""
-                placeholder="email"
+                placeholder="Enter Your Email Id"
                 {...register("email")}
                 className="shadow-md border pr-28 pl-3 py-3 rounded-lg"
               />
@@ -143,7 +142,7 @@ const RegisterForm = () => {
                 <p style={{ color: "red" }}>{errors.email.message}</p>
               )}
             </div>
-            <div className="flex flex-col gap-2 justify-center items-start">
+            <div className="">
               <label
                 htmlFor=""
                 className="font-[Fredoka] font-medium text-[20px]"
@@ -154,7 +153,7 @@ const RegisterForm = () => {
                 type="text"
                 name=""
                 id=""
-                placeholder="college"
+                placeholder="Enter Your College Name"
                 {...register("college")}
                 className="shadow-md border pr-28 pl-3 py-3 rounded-lg"
               />
@@ -171,13 +170,13 @@ const RegisterForm = () => {
                 type="string"
                 name="partid"
                 id="partid"
-                placeholder="Enter Your Name"
+                placeholder="Enter Your Contact Number"
                 {...register("contact")}
                 className="shadow-md border p-3 rounded-md w-full"
               />
               <p className="text-red-500">{errors.contact?.message}</p>
             </div>
-            <div className="flex flex-col gap-2 justify-center items-start">
+            <div className="">
               <label
                 htmlFor="Dept"
                 className="font-[Fredoka] font-medium text-[20px]"
@@ -188,7 +187,7 @@ const RegisterForm = () => {
                 type="text"
                 name=""
                 id=""
-                placeholder="dept"
+                placeholder="Enter your Department"
                 {...register("dept")}
                 className="shadow-md border pr-28 pl-3 py-3 rounded-lg"
               />
@@ -205,7 +204,6 @@ const RegisterForm = () => {
                 <option value="UG">UG</option>
                 <option value="PG">PG</option>
               </select>
-              <p className="text-red-500">{errors.name?.message}</p>
             </div>
             <div className="flex flex-col gap-2 w-full">
               <label className="font-[Fredoka] font-medium text-[20px]">
@@ -255,7 +253,7 @@ const RegisterForm = () => {
             <button
               type="submit"
               onsubmit={() => setIsDialog(true)}
-              className="border rounded-lg px-10 py-3 bg-black text-white  shadow-lg "
+              className="border rounded-lg w-full bg-black text-white  shadow-lg "
             >
               Submit
             </button>

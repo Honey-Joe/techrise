@@ -141,7 +141,7 @@ const Header = () => {
                     onCloseComplete={() => setIsDialog(false)}
                     className="bg-[#08123B]"
                     background="#000"
-                    width={400}
+                    width={350}
                     hasClose = {true}
                     hasFooter = {false}
                   >
