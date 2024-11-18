@@ -21,7 +21,7 @@ const EventDetails = () => {
     fetchdata();
   }, []);
   return (
-    <div>
+    <div className="bg-[#08123B]">
       <div className="flex flex-wrap justify-center py-8 px-4">
         <div className="w-full md:w-5/12 p-4 transition duration-500 ease-in-out transform hover:scale-105">
           <img
