@@ -22,7 +22,7 @@ const RegisterForm = () => {
     name: z.string().min(1, { message: "Enter your Name" }),
     college: z.string().min(1, { message: "Enter your College Name" }),
     dept: z.string().min(1, { message: "Enter your Department" }),
-    contact: z.number().min(10, {message:"Enter your Phone Number Correctly !"})
+    contact: z.string().min(10, {message:"Enter your Phone Number Correctly !"})
 
     // Other fields like password can be added here
   });
@@ -161,10 +161,10 @@ const RegisterForm = () => {
                 htmlFor="part id"
                 className="font-[Fredoka] font-medium text-[20px]"
               >
-                Degree
+                Contact
               </label>
               <input
-                type="text"
+                type="string"
                 name="partid"
                 id="partid"
                 placeholder="Enter Your Name"
@@ -195,7 +195,7 @@ const RegisterForm = () => {
                 htmlFor="part id"
                 className="font-[Fredoka] font-medium text-[20px]"
               >
-                Name
+                Degree
               </label>
               <select name="degeree" id="degree" {...register("degree")} required>
                 <option value="UG">UG</option>
