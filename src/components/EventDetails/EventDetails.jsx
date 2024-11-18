@@ -43,24 +43,24 @@ const EventDetails = () => {
             Rules
           </p>
           <div>
-            <ul >
+            <ul className="flex flex-col gap-5">
               <div>
                 <p className="text-3xl font-bold mb-6 text-pink-400 section-heading text-center">
                   PRELIMS
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   <li className="">
-                    <p className="text-lg font-semibold font-[Fredoka]">
+                    <p className="text-lg font-semibold font-[Fredoka] text-white">
                       {data.event?.rules?.r1}
                     </p>
                   </li>
                   <li className="">
-                    <p className="text-lg font-semibold font-[Fredoka]">
+                    <p className="text-lg font-semibold font-[Fredoka] text-white">
                       {data.event?.rules?.r2}
                     </p>
                   </li>
                   <li className="">
-                    <p className="text-lg font-semibold font-[Fredoka]">
+                    <p className="text-lg font-semibold font-[Fredoka] text-white">
                       {data.event?.rules?.r3}
                     </p>
                   </li>
@@ -72,17 +72,17 @@ const EventDetails = () => {
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   <li className="">
-                    <p className="text-lg font-semibold font-[Fredoka]">
+                    <p className="text-lg font-semibold font-[Fredoka] text-white">
                       {data.event?.rules?.r4}
                     </p>
                   </li>
                   <li className="">
-                    <p className="text-lg font-semibold font-[Fredoka]">
+                    <p className="text-lg font-semibold font-[Fredoka] text-white">
                       {data.event?.rules?.r5}
                     </p>
                   </li>
                   <li className="">
-                    <p className="text-lg font-semibold font-[Fredoka]">
+                    <p className="text-lg font-semibold font-[Fredoka] text-white">
                       {data.event?.rules?.r6}
                     </p>
                   </li>
