@@ -35,7 +35,7 @@ const EventDetails = () => {
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-[Fredoka] pulse bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
             {data.event?.eventname}
           </h1>
-          <p className="text-md sm:text-lg mt-6 leading-relaxed font-[Fredoka] text-white">
+          <p className="text-lg sm:text-lg mt-6 text-justify font-[Fredoka] text-white">
             {data.event?.eventdesc}
           </p>
         </div>
