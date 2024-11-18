@@ -41,7 +41,7 @@ const EventDetails = () => {
         </div>
 
         </div>
-        <div className="flex justify-center flex-col items-center">
+        <div className="flex justify-center flex-col items-center py-5">
           <p className="text-3xl sm:text-4xl font-bold font-[Fredoka] mb-12 pulse bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-center">
             Rules
           </p>
