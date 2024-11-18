@@ -49,17 +49,17 @@ const EventDetails = () => {
                   PRELIMS
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  <li className="rule rule-1 bg-gradient-to-r from-purple-500 to-red-500 text-white text-center py-4 px-6 rounded-lg shadow-lg hover-effect">
+                  <li className="">
                     <p className="text-lg font-semibold font-[Fredoka]">
                       {data.event?.rules?.r1}
                     </p>
                   </li>
-                  <li className="rule rule-1 bg-gradient-to-r from-purple-500 to-red-500 text-white text-center py-4 px-6 rounded-lg shadow-lg hover-effect">
+                  <li className="">
                     <p className="text-lg font-semibold font-[Fredoka]">
                       {data.event?.rules?.r2}
                     </p>
                   </li>
-                  <li className="rule rule-1 bg-gradient-to-r from-purple-500 to-red-500 text-white text-center py-4 px-6 rounded-lg shadow-lg hover-effect">
+                  <li className="">
                     <p className="text-lg font-semibold font-[Fredoka]">
                       {data.event?.rules?.r3}
                     </p>
@@ -71,17 +71,17 @@ const EventDetails = () => {
                   MAINS
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  <li className="rule rule-1 bg-gradient-to-r from-purple-500 to-red-500 text-white text-center py-4 px-6 rounded-lg shadow-lg hover-effect">
+                  <li className="">
                     <p className="text-lg font-semibold font-[Fredoka]">
                       {data.event?.rules?.r4}
                     </p>
                   </li>
-                  <li className="rule rule-1 bg-gradient-to-r from-purple-500 to-red-500 text-white text-center py-4 px-6 rounded-lg shadow-lg hover-effect">
+                  <li className="">
                     <p className="text-lg font-semibold font-[Fredoka]">
                       {data.event?.rules?.r5}
                     </p>
                   </li>
-                  <li className="rule rule-1 bg-gradient-to-r from-purple-500 to-red-500 text-white text-center py-4 px-6 rounded-lg shadow-lg hover-effect">
+                  <li className="">
                     <p className="text-lg font-semibold font-[Fredoka]">
                       {data.event?.rules?.r6}
                     </p>
