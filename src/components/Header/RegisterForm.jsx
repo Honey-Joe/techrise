@@ -22,6 +22,7 @@ const RegisterForm = () => {
     name: z.string().min(1, { message: "Enter your Name" }),
     college: z.string().min(1, { message: "Enter your College Name" }),
     dept: z.string().min(1, { message: "Enter your Department" }),
+    contact: z.number().min(10, {message:"Enter your Phone Number Correctly !"})
 
     // Other fields like password can be added here
   });
@@ -155,6 +156,23 @@ const RegisterForm = () => {
               />
               <p className="text-red-500">{errors.college?.message}</p>
             </div>
+            <div className="w-full flex flex-col gap-2">
+              <label
+                htmlFor="part id"
+                className="font-[Fredoka] font-medium text-[20px]"
+              >
+                Degree
+              </label>
+              <input
+                type="text"
+                name="partid"
+                id="partid"
+                placeholder="Enter Your Name"
+                {...register("contact")}
+                className="shadow-md border p-3 rounded-md w-full"
+              />
+              <p className="text-red-500">{errors.contact?.message}</p>
+            </div>
             <div className="flex flex-col gap-2 justify-center items-start">
               <label
                 htmlFor="Dept"
@@ -171,6 +189,19 @@ const RegisterForm = () => {
                 className="shadow-md border pr-28 pl-3 py-3 rounded-lg"
               />
               <p className="text-red-500">{errors.dept?.message}</p>
+            </div>
+            <div className="w-full flex flex-col gap-2">
+              <label
+                htmlFor="part id"
+                className="font-[Fredoka] font-medium text-[20px]"
+              >
+                Name
+              </label>
+              <select name="degeree" id="degree" {...register("degree")} required>
+                <option value="UG">UG</option>
+                <option value="PG">PG</option>
+              </select>
+              <p className="text-red-500">{errors.name?.message}</p>
             </div>
             <div className="flex flex-col gap-2 w-full">
               <label className="font-[Fredoka] font-medium text-[20px]">
