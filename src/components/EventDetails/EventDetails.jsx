@@ -31,11 +31,11 @@ const EventDetails = () => {
             alt="Event Brochure"
           />
         </div>
-        <div className="w-full  p-4 mt-6 md:mt-0 text-center md:text-left">
+        <div className="w-full  p-4 mt-6 md:mt-0">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-[Fredoka] pulse bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
             {data.event?.eventname}
           </h1>
-          <p className="text-lg sm:text-lg mt-6 font-[Fredoka] text-white text-right">
+          <p className="text-lg sm:text-lg mt-6 font-[Fredoka] text-white ">
             {data.event?.eventdesc}
           </p>
         </div>
