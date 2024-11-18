@@ -22,21 +22,24 @@ const EventDetails = () => {
   }, []);
   return (
     <div className="bg-[#08123B]">
-      <div className="w-[80%] mx-auto grid grid-cols-1 lg:grid-cols-2">
-        <div className="w-full md:w-5/12 p-4 transition duration-500 ease-in-out transform hover:scale-105">
+      <div className="w-[80%] mx-auto grid grid-cols-1 lg:grid-cols-1">
+        <div className="grid grid-cols-1 lg:grid-cols-2">
+        <div className="w-full  p-4 transition duration-500 ease-in-out transform hover:scale-105">
           <img
             src={data.event?.eventurl}
             className="rounded-lg w-full h-64 sm:h-80 md:h-96 object-cover shadow-lg"
             alt="Event Brochure"
           />
         </div>
-        <div className="w-full md:w-6/12 p-4 mt-6 md:mt-0 text-center md:text-left">
+        <div className="w-full  p-4 mt-6 md:mt-0 text-center md:text-left">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-Fredoka pulse bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
             {data.event?.eventname}
           </h1>
           <p className="text-md sm:text-lg mt-6 leading-relaxed font-Fredoka">
             {data.event?.eventdesc}
           </p>
+        </div>
+
         </div>
         <div className="flex justify-center flex-col items-center">
           <p className="text-3xl sm:text-4xl font-bold font-[Fredoka] mb-12 pulse bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-center">
