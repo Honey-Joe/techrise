@@ -22,7 +22,7 @@ const EventDetails = () => {
   }, []);
   return (
     <div className="bg-[#08123B]">
-      <div className="w-[80%] mx-auto grid grid-cols-1 lg:grid-cols-1">
+      <div className="w-[90%] lg:w-[80%] mx-auto grid grid-cols-1 lg:grid-cols-1">
         <div className="grid grid-cols-1 lg:grid-cols-2">
         <div className="w-full  p-4 transition duration-500 ease-in-out transform hover:scale-105">
           <img
@@ -35,7 +35,7 @@ const EventDetails = () => {
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-[Fredoka] pulse bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
             {data.event?.eventname}
           </h1>
-          <p className="text-lg sm:text-lg mt-6 text-justify font-[Fredoka] text-white">
+          <p className="text-lg sm:text-lg mt-6 font-[Fredoka] text-white">
             {data.event?.eventdesc}
           </p>
         </div>
