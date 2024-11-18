@@ -51,7 +51,7 @@ const EventDetails = () => {
                 <p className="text-3xl font-bold mb-6 text-pink-400 section-heading text-center">
                   PRELIMS
                 </p>
-                <div className="grid grid-cols-1  gap-6">
+                <div className="grid grid-cols-1 gap-3">
                   <li className="">
                     <p className="text-lg font-semibold font-[Fredoka] text-white">
                       {data.event?.rules?.r1}
@@ -73,7 +73,7 @@ const EventDetails = () => {
                 <p className="text-3xl font-bold mb-6 text-pink-400 section-heading text-center">
                   MAINS
                 </p>
-                <div className="grid grid-cols-1  gap-6">
+                <div className="grid grid-cols-1 gap-3">
                   <li className="">
                     <p className="text-lg font-semibold font-[Fredoka] text-white">
                       {data.event?.rules?.r4}
