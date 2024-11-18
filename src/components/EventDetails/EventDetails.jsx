@@ -22,7 +22,7 @@ const EventDetails = () => {
   }, []);
   return (
     <div className="bg-[#08123B]">
-      <div className="flex flex-wrap justify-center py-8 px-4">
+      <div className="w-[80%] mx-auto grid grid-cols-1 lg:grid-cols-2">
         <div className="w-full md:w-5/12 p-4 transition duration-500 ease-in-out transform hover:scale-105">
           <img
             src={data.event?.eventurl}
@@ -39,13 +39,13 @@ const EventDetails = () => {
           </p>
         </div>
         <div className="flex justify-center flex-col items-center">
-          <p className="text-3xl sm:text-4xl font-bold font-Lugrasimo mb-12 pulse bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+          <p className="text-3xl sm:text-4xl font-bold font-[Fredoka] mb-12 pulse bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-center">
             Rules
           </p>
           <div>
             <ul >
               <div>
-                <p className="text-3xl font-bold mb-6 text-pink-400 section-heading">
+                <p className="text-3xl font-bold mb-6 text-pink-400 section-heading text-center">
                   PRELIMS
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
