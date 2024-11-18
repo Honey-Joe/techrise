@@ -38,12 +38,12 @@ const EventDetails = () => {
             {data.event?.eventdesc}
           </p>
         </div>
-        <div>
+        <div className="flex justify-center flex-col items-center">
           <p className="text-3xl sm:text-4xl font-bold font-Lugrasimo mb-12 pulse bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
             Rules
           </p>
           <div>
-            <ul>
+            <ul >
               <div>
                 <p className="text-3xl font-bold mb-6 text-pink-400 section-heading">
                   PRELIMS
