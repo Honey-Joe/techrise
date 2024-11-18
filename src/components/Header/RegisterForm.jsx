@@ -23,9 +23,9 @@ const RegisterForm = () => {
     college: z.string().min(1, { message: "Enter your College Name" }),
     dept: z.string().min(1, { message: "Enter your Department" }),
     contact: z.string().min(10, {message:"Enter your Phone Number Correctly !"}),
-    degree: z.object(),
-    event1: z.object(),
-    event2: z.object()
+    degree: z.string(),
+    event1: z.string(),
+    event2: z.string()
 
     // Other fields like password can be added here
   });
