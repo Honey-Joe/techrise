@@ -34,7 +34,7 @@ const RegisterForm = () => {
   const checkEmailExists = async (email) => {
     try {
       const response = await axios.post(
-        "https://techx-24backend.vercel.app/email",
+        "https://techx24-phi.vercel.app/email",
         { email }
       );
       return response.data.message === "Email Available";
@@ -91,7 +91,7 @@ const RegisterForm = () => {
     try {
       // Post data using Axios
       const response = await axios.post(
-        "https://techx-24backend.vercel.app/",
+        "https://techx24-phi.vercel.app/",
         data
       );
       setIsDialog(true);

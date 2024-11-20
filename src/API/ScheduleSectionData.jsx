@@ -1,36 +1,36 @@
 export const ScheduleSectionData = [
     {
-        time: "9.30 - 10.30",
+        time: "9.30 am, - 10.30 am",
         venue: "Barberier Hall",
         eventimg: "https://ik.imagekit.io/HoneyJoe/techx/148837-OUBFCD-179.jpg?updatedAt=1729703883354",
         eventname: "Inauguration"
     },
     {
-        time: "10.30 - 12.00",
+        time: "10.30 am- 12.00 noon",
         venue: "SCC Lab",
         eventimg: "https://ik.imagekit.io/HoneyJoe/techx/20945203.jpg?updatedAt=1729668200134",
         eventname: "Code Crack"
     },
     {
-        time:"10.30 - 12.00",
+        time:"10.30 am - 12.00 noon",
         venue:"Jubliee Hall",
         eventimg: "https://ik.imagekit.io/HoneyJoe/techx/chess-pieces-colors.jpg?updatedAt=1729676437006",
         eventname: "Tech Link"
     },
     {
-        time: "11.30 - 1.00",
+        time: "11.30 am - 1.00 pm",
         venue: "ECC Lab ",
         eventimg: "https://ik.imagekit.io/HoneyJoe/techx/web-design-concept-with-drawings.jpg?updatedAt=1729668256582",
         eventname: "Web Maestro"
     },
     {
-        time: "11.30 - 1.00",
+        time: "11.30 am- 1.00 pm",
         venue: "Jubliee Hall",
         eventimg: "https://ik.imagekit.io/HoneyJoe/techx/expressive-young-lady-posing-studio.jpg?updatedAt=1729676442972",
         eventname: "Quiet Quest"
     },
     {
-        time: "11.00 - 1.00",
+        time: "11.00 am - 1.00 pm",
         venue: "MCA Seminar Hall",
         eventimg: "https://ik.imagekit.io/HoneyJoe/techx/5537.jpg?updatedAt=1729668457303",
         eventname: "Innovation Showcase"
