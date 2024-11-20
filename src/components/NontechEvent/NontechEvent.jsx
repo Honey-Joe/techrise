@@ -18,7 +18,7 @@ const NonTechEventlist = () => {
   const [data,setData] = useState([]);
 
   const fetchdata = async()=>{
-    const res = await axios.get("https://techx-24backend.vercel.app/nonevent");
+    const res = await axios.get("https://techx24-phi.vercel.app/nonevent");
     setData(res.data)
     console.log(res.data);
   }

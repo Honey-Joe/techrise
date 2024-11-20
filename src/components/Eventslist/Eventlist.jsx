@@ -16,7 +16,7 @@ const Eventlist = () => {
   const [data,setData] = useState([]);
 
   const fetchdata = async()=>{
-    const res = await axios.get("https://techx-24backend.vercel.app/event");
+    const res = await axios.get("https://techx24-phi.vercel.app/event");
     setData(res.data)
     console.log(res.data);
   }
