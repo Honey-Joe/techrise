@@ -14,6 +14,7 @@ export const NonTechEventlistdata = [
         authorname : "Put your analytical thinking to the test in Tech Link, the exciting connection-based challenge! Participants will be presented with a series of seemingly unrelated clues, and the goal is to connect the dots and identify the common thread."
     },
     {
+        id:"05",
         imgurl: "https://ik.imagekit.io/HoneyJoe/techx/20845.jpg?updatedAt=1729676435658",
         tag: "Development",
         date: "26 Mar, 2023",
