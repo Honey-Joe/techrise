@@ -5,7 +5,7 @@ export const Eventlistdata = [
     },
     {
         imgurl: "https://ik.imagekit.io/HoneyJoe/techx/web-design-concept-with-drawings.jpg?updatedAt=1729668256582",
-        
+
         blogtitle: "Web Maestro",
 
     },

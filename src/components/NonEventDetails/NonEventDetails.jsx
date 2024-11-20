@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 const NonEventDetails = () => {
 
@@ -25,11 +25,13 @@ const NonEventDetails = () => {
       <div className="w-[90%] lg:w-[80%] mx-auto grid grid-cols-1 lg:grid-cols-1">
         <div className="grid grid-cols-1 lg:grid-cols-2">
         <div className="w-full  p-4 transition duration-500 ease-in-out transform hover:scale-105">
-          <img
-            src={data.event?.eventurl}
-            className="rounded-lg w-full h-64 sm:h-80 md:h-96 object-cover shadow-lg"
-            alt="Event Brochure"
-          />
+          <Link to={`/nonevent${data.event?.eventid}`}>
+            <img
+              src={data.event?.eventurl}
+              className="rounded-lg w-full h-64 sm:h-80 md:h-96 object-cover shadow-lg"
+              alt="Event Brochure"
+            />
+          </Link>
         </div>
         <div className="w-full  p-4 mt-6 md:mt-0">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-[Fredoka] pulse bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
