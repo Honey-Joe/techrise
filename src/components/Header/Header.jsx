@@ -5,6 +5,7 @@ import CountdownTimer from "../Contdown/CountDown";
 import { Button, Dialog, Pane, Paragraph, SideSheet } from "evergreen-ui";
 import "./baackground.css";
 import RegisterForm from "./RegisterForm";
+
 const Header = () => {
   const [isShown, setIsShown] = useState(false);
   const [isDialog, setIsDialog] = useState(false);

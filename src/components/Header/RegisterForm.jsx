@@ -4,7 +4,6 @@ import {  useState } from "react";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {  Dialog, Pane } from "evergreen-ui";
-import "./register.css"
 
 const RegisterForm = () => {
   const [isDialog, setIsDialog] = useState(false);
@@ -54,9 +53,14 @@ const RegisterForm = () => {
     "Code Crack": ["Tech Link"],
     "Web Maestro": ["Quiet Quest"],
     "Quiz Quest": ["Design Dazzle"],
-    InnovExhibit: ["Quiet Quest", "Tech Link"],
+    "InnovExhibit": ["Quiet Quest", "Tech Link"],
   };
 
+    const disableMap2 = {
+      "Tech Link": ["Code Crack"],
+      "Quiet Quest": ["InnovExhibit","Web Maestro"],
+      "Design Dazzle": ["Quiz Quest"],
+    }
   // Function to handle selection change in the first select
   const handleSelect1Change = (event) => {
     setSelectedOption1(event.target.value);
@@ -119,7 +123,7 @@ const RegisterForm = () => {
                 id="partid"
                 placeholder="Enter Your Name"
                 {...register("name")}
-                className="shadow-md border p-3 rounded-md w-full"
+                className="shadow-md border p-3 rounded-md w-full input-field"
               />
               <p className="text-red-500">{errors.name?.message}</p>
             </div>
@@ -172,7 +176,7 @@ const RegisterForm = () => {
                 id="partid"
                 placeholder="Enter Your Contact Number"
                 {...register("contact")}
-                className="shadow-md border p-3 rounded-md w-full"
+                className="shadow-md border p-3 rounded-md w-full input-field"
               />
               <p className="text-red-500">{errors.contact?.message}</p>
             </div>
@@ -189,7 +193,7 @@ const RegisterForm = () => {
                 id=""
                 placeholder="Enter your Department"
                 {...register("dept")}
-                className="shadow-md border pr-28 pl-3 py-3 rounded-lg"
+                className="shadow-md border w-full p-3 rounded-lg"
               />
               <p className="text-red-500">{errors.dept?.message}</p>
             </div>
@@ -200,7 +204,7 @@ const RegisterForm = () => {
               >
                 Degree
               </label>
-              <select name="degeree" id="degree" {...register("degree")} required>
+              <select className="input-select shadow-md border pr-28 pl-3 py-3 rounded-lg input-select" name="degeree" id="degree" {...register("degree")} required>
                 <option value="UG">UG</option>
                 <option value="PG">PG</option>
               </select>
@@ -213,11 +217,16 @@ const RegisterForm = () => {
                 {...register("event1")}
                 value={selectedOption1}
                 onChange={handleSelect1Change}
-                className="shadow-md border pr-28 pl-3 py-3 rounded-lg"
+                className="shadow-md border pr-28 pl-3 py-3 rounded-lg input-select"
               >
                 <option value="">Select an option</option>
                 {options1.map((option) => (
-                  <option key={option} value={option}>
+                  <option key={option} value={option}
+                  disabled={
+                    disableMap2[selectedOption2] &&
+                    disableMap2[selectedOption2].includes(option)
+                  }
+                  >
                     {option}
                   </option>
                 ))}
@@ -232,7 +241,7 @@ const RegisterForm = () => {
                 {...register("event2")}
                 value={selectedOption2}
                 onChange={handleSelect2Change}
-                className="shadow-md border pr-28 pl-3 py-3 rounded-lg"
+                className="shadow-md border pr-28 pl-3 py-3 rounded-lg input-select"
               >
                 <option value="">Select an option</option>
                 {options2.map((option) => (
@@ -253,7 +262,7 @@ const RegisterForm = () => {
             <button
               type="submit"
               onsubmit={() => setIsDialog(true)}
-              className="border rounded-lg w-full bg-black text-white  shadow-lg "
+              className="border rounded-lg w-full bg-black text-white  shadow-lg submit-button py-3 font-[Fredoka]"
             >
               Submit
             </button>
