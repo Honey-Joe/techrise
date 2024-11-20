@@ -265,7 +265,7 @@ const RegisterForm = () => {
             </div>
             <div>
               <label htmlFor="UPI ID" className="font-[Fredoka] font-medium text-[20px]">Enter the UPI ACCOUNT HOLDER NAME </label>
-              <p className="font-[Fredoka] text-[16px]">Note: Enter the exact gpay account name ! The Registration wil taken if the name matches !</p>
+              <p className="font-[Fredoka] text-[16px]">Note: Enter the exact gpay account name ! The Registration wil taken if the name matches ! Registration Fee :₹ 150</p>
               <input type="text" name="" id="" placeholder="Enter The UPI Account Name" className="shadow-md border  p-3 rounded-lg w-full" {...register("payment")} />
             </div>
             
