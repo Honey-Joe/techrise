@@ -4,6 +4,7 @@ import {  useState } from "react";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {  Dialog, Pane } from "evergreen-ui";
+import { example, scanner } from "../../assets/asset";
 
 const RegisterForm = () => {
   const [isDialog, setIsDialog] = useState(false);
@@ -25,7 +26,8 @@ const RegisterForm = () => {
     contact: z.string().min(10, {message:"Enter your Phone Number Correctly !"}),
     degree: z.string(),
     event1: z.string(),
-    event2: z.string()
+    event2: z.string(),
+    payment: z.string().min(1, {message:"Enter the UPI name or Id"})
 
     // Other fields like password can be added here
   });
@@ -106,11 +108,11 @@ const RegisterForm = () => {
         action=""
         method="post"
         onSubmit={handleSubmit(onsubmit)}
-        className="w-full"
+        className=""
       >
         <div className="flex justify-center">
           <div className="flex flex-col gap-5 justify-center items-center ">
-            <div className="w-full flex flex-col gap-2">
+            <div className=" flex flex-col gap-2 w-full">
               <label
                 htmlFor="part id"
                 className="font-[Fredoka] font-medium text-[20px]"
@@ -123,11 +125,11 @@ const RegisterForm = () => {
                 id="partid"
                 placeholder="Enter Your Name"
                 {...register("name")}
-                className="shadow-md border p-3 rounded-md w-full input-field"
+                className="shadow-md border  p-3 rounded-lg"
               />
               <p className="text-red-500">{errors.name?.message}</p>
             </div>
-            <div className="">
+            <div className=" flex flex-col gap-2 w-full">
               <label
                 htmlFor="email "
                 className="font-[Fredoka] font-medium text-[20px]"
@@ -140,13 +142,13 @@ const RegisterForm = () => {
                 id=""
                 placeholder="Enter Your Email Id"
                 {...register("email")}
-                className="shadow-md border pr-28 pl-3 py-3 rounded-lg"
+                className="shadow-md border  p-3 rounded-lg"
               />
               {errors.email && (
                 <p style={{ color: "red" }}>{errors.email.message}</p>
               )}
             </div>
-            <div className="">
+            <div className=" flex flex-col gap-2 w-full">
               <label
                 htmlFor=""
                 className="font-[Fredoka] font-medium text-[20px]"
@@ -159,11 +161,11 @@ const RegisterForm = () => {
                 id=""
                 placeholder="Enter Your College Name"
                 {...register("college")}
-                className="shadow-md border pr-28 pl-3 py-3 rounded-lg"
+                className="shadow-md border  p-3 rounded-lg"
               />
               <p className="text-red-500">{errors.college?.message}</p>
             </div>
-            <div className="w-full flex flex-col gap-2">
+            <div className=" flex flex-col gap-2 w-full">
               <label
                 htmlFor="part id"
                 className="font-[Fredoka] font-medium text-[20px]"
@@ -176,11 +178,11 @@ const RegisterForm = () => {
                 id="partid"
                 placeholder="Enter Your Contact Number"
                 {...register("contact")}
-                className="shadow-md border p-3 rounded-md w-full input-field"
+                className="shadow-md border  p-3 rounded-lg"
               />
               <p className="text-red-500">{errors.contact?.message}</p>
             </div>
-            <div className="">
+            <div className=" flex flex-col gap-2 w-full">
               <label
                 htmlFor="Dept"
                 className="font-[Fredoka] font-medium text-[20px]"
@@ -193,23 +195,23 @@ const RegisterForm = () => {
                 id=""
                 placeholder="Enter your Department"
                 {...register("dept")}
-                className="shadow-md border w-full p-3 rounded-lg"
+                className="shadow-md border  p-3 rounded-lg"
               />
               <p className="text-red-500">{errors.dept?.message}</p>
             </div>
-            <div className="w-full flex flex-col gap-2">
+            <div className=" flex flex-col gap-2 w-full">
               <label
                 htmlFor="part id"
                 className="font-[Fredoka] font-medium text-[20px]"
               >
                 Degree
               </label>
-              <select className="input-select shadow-md border pr-28 pl-3 py-3 rounded-lg input-select" name="degeree" id="degree" {...register("degree")} required>
+              <select className="shadow-md border  p-3 rounded-lg" name="degeree" id="degree" {...register("degree")} required>
                 <option value="UG">UG</option>
                 <option value="PG">PG</option>
               </select>
             </div>
-            <div className="flex flex-col gap-2 w-full">
+            <div className=" flex flex-col gap-2 w-full">
               <label className="font-[Fredoka] font-medium text-[20px]">
                 Technical Event
               </label>
@@ -217,7 +219,7 @@ const RegisterForm = () => {
                 {...register("event1")}
                 value={selectedOption1}
                 onChange={handleSelect1Change}
-                className="shadow-md border pr-28 pl-3 py-3 rounded-lg input-select"
+                className="shadow-md border  p-3 rounded-lg"
               >
                 <option value="">Select an option</option>
                 {options1.map((option) => (
@@ -233,7 +235,7 @@ const RegisterForm = () => {
               </select>
             </div>
 
-            <div className="flex flex-col gap-2 w-full">
+            <div className=" flex flex-col gap-2 w-full">
               <label className="font-[Fredoka] font-medium text-[20px]">
                 Non Technical Event
               </label>
@@ -241,7 +243,7 @@ const RegisterForm = () => {
                 {...register("event2")}
                 value={selectedOption2}
                 onChange={handleSelect2Change}
-                className="shadow-md border pr-28 pl-3 py-3 rounded-lg input-select"
+                className="shadow-md border  p-3 rounded-lg"
               >
                 <option value="">Select an option</option>
                 {options2.map((option) => (
@@ -258,11 +260,20 @@ const RegisterForm = () => {
                 ))}
               </select>
             </div>
+            <div className=" flex flex-col gap-2 w-full">
+              <img src={scanner} alt="" />
+            </div>
+            <div>
+              <label htmlFor="UPI ID" className="font-[Fredoka] font-medium text-[20px]">Enter the UPI ACCOUNT HOLDER NAME </label>
+              <p className="font-[Fredoka] text-[16px]">Note: Enter the exact gpay account name ! The Registration wil taken if the name matches !</p>
+              <input type="text" name="" id="" placeholder="Enter The UPI Account Name" className="shadow-md border  p-3 rounded-lg w-full" {...register("payment")} />
+            </div>
+            
 
             <button
               type="submit"
               onsubmit={() => setIsDialog(true)}
-              className="border rounded-lg w-full bg-black text-white  shadow-lg submit-button py-3 font-[Fredoka]"
+              className="border rounded-lg  bg-black text-white  shadow-lg submit-button py-3 font-[Fredoka] w-full"
             >
               Submit
             </button>
