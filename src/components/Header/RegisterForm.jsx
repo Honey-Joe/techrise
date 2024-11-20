@@ -95,7 +95,6 @@ const RegisterForm = () => {
         data
       );
       setIsDialog(true);
-      console.log(data)
     } catch (error) {
       alert("Form Not Submitted")
     }

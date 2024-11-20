@@ -13,9 +13,7 @@ const EventDetails = () => {
       "https://techx24-phi.vercel.app/event/" + datap.id
     );
     setData(res.data);
-    console.log(res.data);
   };
-  console.log(data.event);
 
   useEffect(() => {
     fetchdata();

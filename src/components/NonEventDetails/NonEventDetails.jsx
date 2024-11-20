@@ -12,7 +12,6 @@ const NonEventDetails = () => {
   const fetchdata = async()=>{
     const res = await axios.get("https://techx24-phi.vercel.app/nonevent/" + datap.id);
     setData(res.data)
-    console.log(res.data);
   }
   console.log(data.event)
 
