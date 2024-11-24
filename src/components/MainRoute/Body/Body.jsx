@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import About from "../About/About";
 import Eventlist from "../Eventslist/Eventlist";
-import NontechEvent from "../NontechEvent/NontechEvent";
-import Schedule from "../Schedule/Schedule";
 import Map from "../Map/Map";
 import Aos from "aos";
 import "aos/dist/aos.css"
 import Faq from "../Faq/Faq";
+import NonTechEventlist from "../NontechEvent/NontechEvent";
+import Schedule from "../Schedule/Schedule";
 
 const Body = () => {
   useEffect(()=>{
@@ -21,7 +21,7 @@ const Body = () => {
         <Eventlist></Eventlist>
       </div>
       <div>
-        <NontechEvent></NontechEvent>
+        <NonTechEventlist></NonTechEventlist>
       </div>
       <div>
         <Schedule></Schedule>

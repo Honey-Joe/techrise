@@ -6,7 +6,6 @@ import "swiper/css/pagination";
 import { EffectCoverflow, Pagination } from "swiper/modules";
 import './styles.css';
 import NontechEventCard from "./NontechEventCard";
-import { NonTechEventlistdata } from "../../API/NonTechEventlistdata";
 import "aos/dist/aos.css"
 import { useEffect, useState } from "react";
 import Aos from "aos";

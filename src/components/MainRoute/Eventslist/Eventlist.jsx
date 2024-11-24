@@ -1,4 +1,4 @@
-import { Eventlistdata } from "../../API/Eventlistdata";
+import { Eventlistdata } from "../../../API/Eventlistdata";
 import Eventlistcard from "./EventlistCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";

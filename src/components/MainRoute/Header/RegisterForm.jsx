@@ -4,7 +4,7 @@ import {  useState } from "react";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {  Dialog, Pane } from "evergreen-ui";
-import { example, scanner } from "../../assets/asset";
+import { example, scanner } from "../../../assets/asset";
 
 const RegisterForm = () => {
   const [isDialog, setIsDialog] = useState(false);

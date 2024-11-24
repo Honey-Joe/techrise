@@ -1,11 +1,13 @@
 import  ReactDOM  from "react-dom/client";
 import "./index.css"
-import Header from "./components/Header/Header";
-import Body from "./components/Body/Body";
-import Footer from "./components/Footer.jsx/Footer";
+
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import EventDetails from "./components/EventDetails/EventDetails";
-import NonEventDetails from "./components/NonEventDetails/NonEventDetails";
+import Header from "./components/MainRoute/Header/Header";
+import Body from "./components/MainRoute/Body/Body";
+import Footer from "./components/MainRoute/Footer.jsx/Footer";
+import EventDetails from "./components/MainRoute/EventDetails/EventDetails";
+import NonEventDetails from "./components/MainRoute/NonEventDetails/NonEventDetails";
+
 
 
 const Applayout = ()=>{

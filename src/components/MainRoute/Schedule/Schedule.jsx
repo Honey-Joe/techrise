@@ -1,4 +1,4 @@
-import { ScheduleSectionData } from "../../API/ScheduleSectionData"
+import { ScheduleSectionData } from "../../../API/ScheduleSectionData"
 import Schedulesection from "./Schedulesection"
 
 const Schedule = () => {
